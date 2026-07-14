@@ -2,13 +2,6 @@
 
 > How to choose between `Microsoft 365 Copilot`, `Copilot Studio`, and `Azure AI Foundry (Azure AI Studio)` for your scenario.
 
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-07-01
-
 ----------
 
 <details>

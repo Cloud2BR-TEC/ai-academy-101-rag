@@ -1,12 +1,5 @@
 # Zero Trust RAG Architecture - Overview
 
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
 ----------
 
 > For Azure AI Search and OpenAI in a Retrieval-Augmented Generation (RAG) setup, find below an example of how these components are interconnected within a secure Azure environment.
