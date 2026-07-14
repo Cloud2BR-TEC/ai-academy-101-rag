@@ -28,7 +28,7 @@ increase request following: https://aka.ms/AddQuotaSubscription.
 > In the meantime, you can decrease the search service SKU to standard basic since you don't have enough quota. Once the quota is accepted, you can redeploy the service with the right quota assigned.
 
 1. After initializing the project using the azd templates, navigate to the `infra` folder, where you'll find a file named `main.bicep`. For example: [GPT-RAG_SolutionAccelerator/infra/main.bicep](./GPT-RAG_SolutionAccelerator/infra/main.bicep)
-2. In the `AI search SKU name` configuration section, you can modify the SKU being used. To do this, for example update the definition in line [336, which currently references standard2/standard](https://github.com/MicrosoftCloudEssentials-LearningHub/RAG-ChatBot-Implementation/blob/main/GPT-RAG_SolutionAccelerator/infra/main.bicep#L386), and replace it with the definition in line [335, which specifies standard/basic](https://github.com/MicrosoftCloudEssentials-LearningHub/RAG-ChatBot-Implementation/blob/main/GPT-RAG_SolutionAccelerator/infra/main.bicep#L385)
+2. In the `AI search SKU name` configuration section, you can modify the SKU being used. Open [GPT-RAG_SolutionAccelerator/infra/main.bicep](./GPT-RAG_SolutionAccelerator/infra/main.bicep), locate the `standard2/standard` SKU entry, and replace it with the `standard/basic` SKU entry.
 
     <https://github.com/user-attachments/assets/8cc518e2-12f7-427e-9572-ecdccb931a86>
 

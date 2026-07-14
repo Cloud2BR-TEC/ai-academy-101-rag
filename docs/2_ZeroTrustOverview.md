@@ -7,7 +7,7 @@
 <details>
 <summary><b> References </b> (Click to expand)</summary>
    
-- [RAG Microsoft Enterprise RAG Solution Accelerator (GPT-RAG) - github repo](https://github.com/Azure/GPT-RAG)
+- [RAG Microsoft Enterprise RAG Solution Accelerator (local copy)](./GPT-RAG_SolutionAccelerator/README.md)
 - [Overview – Apply Zero Trust principles to Azure IaaS](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview)
 - [Zero Trust defined](https://www.microsoft.com/en-us/security/business/zero-trust?msockid=38ec3806873362243e122ce086486339)
 - [Zero Trust Essentials eBook](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/zero-trust-essentials-ebook.pdf)
@@ -70,7 +70,7 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/8246a0cd-622a-4d1e-b575-08123e9b3458" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
 </div>
 
-From [Zero Trust Architecture Deployment](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#zero-trust-architecture-deployment)
+From [Zero Trust Architecture Deployment](./GPT-RAG_SolutionAccelerator/docs/GUIDE.md#zero-trust-architecture-deployment)
 
 <!-- START BADGE -->
 <div align="center">

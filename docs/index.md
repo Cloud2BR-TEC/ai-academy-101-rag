@@ -294,22 +294,22 @@ SharePoint Site â†’ Metadata Streamer â†’ Document Downloader â†’
 > Zero Trust AI architecture in Microsoft Azure is a `security framework designed to protect data, applications, and infrastructure by assuming that threats can come from both inside and outside the network`. This model operates on the principle of "never trust, always verify", meaning `every access request is thoroughly authenticated and authorized based on all available data points, regardless of its origin. The architecture integrates multiple layers of security, including strong identity verification, device compliance checks, and least privilege access, ensuring that only authorized users and devices can access sensitive resources`. By continuously monitoring and validating each request, Zero Trust AI architecture helps organizations minimize risks and enhance their overall security posture.
 
 !!! info
-    Click [here for a more quick guidance about Zero Trust](./2_ZeroTrustOverview.md). For a `solution accelerator with a zero-trust architecture` please refer to [Microsoft's official GPT-RAG Solution Accelerator](https://github.com/Azure/GPT-RAG) or contact Microsoft directly: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+  Click [here for a more quick guidance about Zero Trust](./2_ZeroTrustOverview.md). For a `solution accelerator with a zero-trust architecture` please refer to the [local GPT-RAG Solution Accelerator copy](./GPT-RAG_SolutionAccelerator/README.md) or contact Microsoft directly: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
 
 
 <div align="center">
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/1b16f34b-842c-4610-a52a-d0d85e684dac" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
 </div>
 
-From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/main/media/architecture-GPT-RAG-ZeroTrust-LZ.png)
+From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/architecture-GPT-RAG-ZeroTrust-LZ.png)
 
 | **Aspect**                | **Details**                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
-| **Application Components**| - [Data Ingestion](https://github.com/Azure/gpt-rag-ingestion): Optimizes data chunking and indexing for retrieval. Integrates with SharePoint for document processing. Click [here for more information about the Sharepoint setup](https://github.com/Azure/GPT-RAG/blob/main/docs/INGESTION_SHAREPOINT_SETUP.md). <br> - Orchestrator: Manages retrieval and response generation. [Functional (Semantic Kernel)](https://github.com/Azure/gpt-rag-orchestrator) or [Agentic (AutoGen)](https://github.com/Azure/gpt-rag-agentic). <br> - App Front-End: User interface with [React Front-End](https://github.com/Azure/gpt-rag-frontend) or [Chainlit Front-End](https://github.com/Azure/gpt-rag-ui), following [Backend for Front-End pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) <br/> - [RAG Security Hub](https://github.com/Azure/gpt-rag-securityhub/tree/main): Secures the RAG stack with Azure AD, Key Vault, and secure deployment practices. Centralizes environment config and vulnerability management.|
+| **Application Components**| - [Data Ingestion](https://github.com/Azure/gpt-rag-ingestion): Optimizes data chunking and indexing for retrieval. Integrates with SharePoint for document processing. Click [here for local SharePoint setup guidance](./GPT-RAG_SolutionAccelerator/docs/INGESTION_SHAREPOINT_SETUP.md). <br> - Orchestrator: Manages retrieval and response generation. [Functional (Semantic Kernel)](https://github.com/Azure/gpt-rag-orchestrator) or [Agentic (AutoGen)](https://github.com/Azure/gpt-rag-agentic). <br> - App Front-End: User interface with [React Front-End](https://github.com/Azure/gpt-rag-frontend) or [Chainlit Front-End](https://github.com/Azure/gpt-rag-ui), following [Backend for Front-End pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) <br/> - [RAG Security Hub](https://github.com/Azure/gpt-rag-securityhub/tree/main): Secures the RAG stack with Azure AD, Key Vault, and secure deployment practices. Centralizes environment config and vulnerability management.|
 | **Batch Processing**      | Handles large datasets in parallel. Ideal for data analysis and content generation. |
 
 !!! note
-    To deploy this solution accelerator, please make sure that you have installed all the requirements mentioned in the [prerequisites section](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#getting-started) before proceeding. Below, you will find visual guidance that complements the [Zero Trust Architecture Deployment](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#zero-trust-architecture-deployment) from the [Microsoft's official GPT-RAG Solution Accelerator](https://github.com/Azure/GPT-RAG).
+  To deploy this solution accelerator, please make sure that you have installed all the requirements mentioned in the [local prerequisites section](./GPT-RAG_SolutionAccelerator/README.md#getting-started) before proceeding. Below, you will find visual guidance that complements the [local Zero Trust Architecture Deployment](./GPT-RAG_SolutionAccelerator/README.md#zero-trust-architecture-deployment) from the in-repo GPT-RAG Solution Accelerator copy.
 
 
 ### Step 0.1: Install azd 
@@ -540,7 +540,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
   
   <https://github.com/user-attachments/assets/daf3df9d-8c77-42b8-9b84-6728ef4a3332>
 
-1. Create a new folder, for example `deploy` as mentioned in the [official guide](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#zero-trust-architecture-deployment)
+1. Create a new folder, for example `deploy` as mentioned in the [local guide](./GPT-RAG_SolutionAccelerator/README.md#zero-trust-architecture-deployment)
 2. Once you've created the folder, go ahead and jump into it.
 
       ```
