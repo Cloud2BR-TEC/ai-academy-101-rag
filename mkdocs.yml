@@ -58,18 +58,21 @@ extra:
 
 nav:
   - Home: index.md
-  - 01. RAG Pattern Overview: 0_RAG_Overview.md
-  - 02. Private Architecture Demo: 1_PrivateArchitecture.md
-  - 03. Zero Trust Architecture: 2_ZeroTrustOverview.md
-  - 04. Pricing Demos:
+  - 01. Core Concepts:
+    - RAG Pattern Overview: 0_RAG_Overview.md
+    - Private Architecture Demo: 1_PrivateArchitecture.md
+    - Zero Trust Architecture: 2_ZeroTrustOverview.md
+  - 02. Pricing Demos:
       - Overview: 3_PricingDemos/README.md
       - Document Intelligence Pricing: 3_PricingDemos/0_Doc-Intellig.md
       - AI Search Pricing: 3_PricingDemos/1_AI-Search.md
       - Azure OpenAI and AI Foundry Pricing: 3_PricingDemos/2_AOAI-AIFoundry.md
-  - 05. Copilot Decision Guide: 4_Which_Copilot_toChoose.md
-  - 06. Initial AI Questions: 5_AI_Initial_Questions.md
-  - 07. Quick Operations:
+  - 03. Planning and Decisions:
+    - Copilot Decision Guide: 4_Which_Copilot_toChoose.md
+    - Initial AI Questions: 5_AI_Initial_Questions.md
+  - 04. Deployment and Operations:
+    - Infrastructure with Terraform: terraform-infrastructure/README.md
+    - Quick Operations:
       - How to Modify: how-modify.md
       - How to Redeploy: how-redeploy-app.md
       - Troubleshooting: troubleshooting.md
-  - 08. Infrastructure with Terraform: terraform-infrastructure/README.md
