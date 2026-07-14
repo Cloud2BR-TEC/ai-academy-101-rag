@@ -1,4 +1,4 @@
-## Provisioning and Deployment Process Concepts
+﻿## Provisioning and Deployment Process Concepts
 
 The **Provisioning and Deployment** processes in this project are designed to be automated using **Bicep templates** and the **Azure Developer CLI (azd)**, ensuring a consistent, secure, and efficient setup of all Azure resources in alignment with Zero Trust principles. 
 
@@ -109,7 +109,7 @@ Each stage involves specific hooks and tasks to create or update resources and s
 ### 1. Provision Stage
 
 **Command:** `azd provision`  
-**Purpose:** Sets up the necessary Azure infrastructure as defined in the project’s resource templates.
+**Purpose:** Sets up the necessary Azure infrastructure as defined in the projectâ€™s resource templates.
 
 **Process:**
 
@@ -160,7 +160,8 @@ Each stage involves specific hooks and tasks to create or update resources and s
    - **Function:** Removes remaining cloned repositories and completes final housekeeping to ensure a secure, uncluttered environment.  
    - **Scope:** Runs **once** after all services have been deployed.
 
-> [!Note]  
-> To support both PowerShell and Bash shells during deployment, the scripts are provided in both formats. To simplify the text, we removed file extensions (e.g., `.ps1` or `.sh`) from the explanation above.
+!!! note
+    To support both PowerShell and Bash shells during deployment, the scripts are provided in both formats. To simplify the text, we removed file extensions (e.g., `.ps1` or `.sh`) from the explanation above.
+
 
 Last updated: 2025-04-02

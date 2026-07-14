@@ -1,4 +1,4 @@
-# Troubleshooting: Known Errors 
+﻿# Troubleshooting: Known Errors 
 
 ------------------------------------------
 
@@ -19,8 +19,9 @@ ServiceQuotaExceeded: Operation would exceed 'standard2' tier service quota. You
 increase request following: https://aka.ms/AddQuotaSubscription.
 ```
 
-> [!TIP]
-> Please follow this link to review the process for [Request a quota increase](https://learn.microsoft.com/en-us/azure/quotas/quickstart-increase-quota-portal#request-a-quota-increase)
+!!! tip
+    Please follow this link to review the process for [Request a quota increase](https://learn.microsoft.com/en-us/azure/quotas/quickstart-increase-quota-portal#request-a-quota-increase)
+
 
 ### Workaround 
 

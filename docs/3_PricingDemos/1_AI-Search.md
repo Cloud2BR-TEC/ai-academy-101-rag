@@ -1,9 +1,10 @@
-# Demonstration: Azure AI Search Pricing 
+﻿# Demonstration: Azure AI Search Pricing 
 
 ----------
 
-> [!NOTE]
-> Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
+!!! note
+    Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
+
 
 <details>
 <summary><b>List of References </b> (Click to expand)</summary>
@@ -32,7 +33,7 @@
 
 - **Number of products**: 50,000  
 - **Attributes per product**: 15 (title, description, price, tags, etc.)  
-- **Estimated index size**: ~ 1–2 GB  
+- **Estimated index size**: ~ 1â€“2 GB  
 - **Use case**: Product search with filters and semantic ranking  
 - **Suggested tier**: `Standard S1 with 2 replicas, 1 partition (for high availability)`  
 
@@ -41,7 +42,7 @@
 - **Number of documents**: 100,000  
 - **Pages per document**: 25  
 - **Total pages**: 2.5 million  
-- **Estimated index size**: ~ 10–15 GB  
+- **Estimated index size**: ~ 10â€“15 GB  
 - **Use case**: Legal search with OCR, entity recognition, and semantic search  
 - **Suggested tier**: `Standard S2 or Storage Optimized L1 with 2+ partitions`  
 
@@ -50,7 +51,7 @@
 - **Articles per day**: 5,000  
 - **Retention**: 1 year  
 - **Total documents**: ~ 1.8 million  
-- **Estimated index size**: ~ 8–10 GB  
+- **Estimated index size**: ~ 8â€“10 GB  
 - **Use case**: Real-time news search with filters and AI enrichment  
 - **Suggested tier**: `Standard S2 or S3 with 3 replicas, 2 partitions`
 

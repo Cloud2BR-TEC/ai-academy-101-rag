@@ -1,4 +1,4 @@
-# SharePoint Setup
+﻿# SharePoint Setup
 
 This section explains how to configure SharePoint as a data source for the `ragindex` GPT-RAG Azure AI Search Index, using the `Sites.Selected` permission to limit access to specific site collections.
 
@@ -63,8 +63,9 @@ Before executing this procedure ensure you have the necessary roles for each ste
 
    The `Sites.Selected` permission requires you to explicitly grant the application access to specific site collections. This step must be performed using the Microsoft Graph API.
 
-   > [!NOTE]
-   > Currently, assigning site permissions using `Sites.Selected` cannot be done through the Azure Portal. You need to use Microsoft Graph API or PowerShell.
+!!! note
+    Currently, assigning site permissions using `Sites.Selected` cannot be done through the Azure Portal. You need to use Microsoft Graph API or PowerShell.
+
 
    - **Gather Site Information**:
 
@@ -189,8 +190,9 @@ Before executing this procedure ensure you have the necessary roles for each ste
 
     ![Register Application](../media/sharepoint-secret-app.png)
 
-> [!NOTE]
-> Done! You have completed the necessary permissions for SharePoint. Now, to complete the configuration in your Function App:
+!!! note
+    Done! You have completed the necessary permissions for SharePoint. Now, to complete the configuration in your Function App:
+
 
 5. **Gather SharePoint Site Information**
 
@@ -225,8 +227,9 @@ Before executing this procedure ensure you have the necessary roles for each ste
    - **Add SharePoint Client Secret to KeyVault**:
      - Add the SharePoint client secret value to the GPT-RAG Key Vault. You can use **sharepointClientSecret** as the secret name, or if you choose a custom name, make sure to add it to the `SHAREPOINT_CLIENT_SECRET_NAME` environment variable.
 
-  >[!NOTE]
-  > Leave `SHAREPOINT_FILES_FORMAT` empty to include the following default extensions: vtt, xlsx, xls, pdf, png, jpeg, jpg, bmp, tiff, docx, pptx.
+!!! note
+    Leave `SHAREPOINT_FILES_FORMAT` empty to include the following default extensions: vtt, xlsx, xls, pdf, png, jpeg, jpg, bmp, tiff, docx, pptx.
+
 
    - **Save and Restart**:
 
@@ -234,8 +237,9 @@ Before executing this procedure ensure you have the necessary roles for each ste
      - Restart the Function App to ensure the new settings take effect.
 
 
-> [!NOTE] 
-> Done! You have completed the SharePoint configuration procedure.
+!!! note
+    Done! You have completed the SharePoint configuration procedure.
+
 
 ## Validation
 
@@ -259,8 +263,9 @@ Before executing this procedure ensure you have the necessary roles for each ste
 
      - Execute search queries to ensure that content from the specific SharePoint sites is retrievable.
 
-> [!NOTE]
-> Using `Sites.Selected` ensures that your application only has access to the SharePoint sites you've explicitly granted permissions to, enhancing security by limiting access scope.
+!!! note
+    Using `Sites.Selected` ensures that your application only has access to the SharePoint sites you've explicitly granted permissions to, enhancing security by limiting access scope.
+
 
 ---
 

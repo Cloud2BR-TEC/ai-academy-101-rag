@@ -1,4 +1,4 @@
-# Azure Infrastructure Terraform Templates
+﻿# Azure Infrastructure Terraform Templates
 
 ----------
 
@@ -22,12 +22,12 @@ Templates structure:
 
 ```
 .
-├── README.md
-├────── main.tf
-├────── variables.tf
-├────── provider.tf
-├────── terraform.tfvars
-├────── outputs.tf
+â”œâ”€â”€ README.md
+â”œâ”€â”€â”€â”€â”€â”€ main.tf
+â”œâ”€â”€â”€â”€â”€â”€ variables.tf
+â”œâ”€â”€â”€â”€â”€â”€ provider.tf
+â”œâ”€â”€â”€â”€â”€â”€ terraform.tfvars
+â”œâ”€â”€â”€â”€â”€â”€ outputs.tf
 ```
 
 - main.tf `(Main Terraform configuration file)`: This file contains the core infrastructure code. It defines the resources you want to create, such as virtual machines, networks, and storage. It's the primary file where you describe your infrastructure in a declarative manner.
@@ -47,8 +47,9 @@ graph TD;
     C -->|Delete Resource if needed| F[terraform destroy]
 ```
 
-> [!IMPORTANT]
-> Please modify `terraform.tfvars` with your information, then run the following flow. If you need more visual guidance, please check the video that illustrates the provisioning steps. 
+!!! info
+    Please modify `terraform.tfvars` with your information, then run the following flow. If you need more visual guidance, please check the video that illustrates the provisioning steps. 
+
 
 1. **Login to Azure**: This command logs you into your Azure account. It opens a browser window where you can enter your Azure credentials. Once logged in, you can manage your Azure resources from the command line.
 

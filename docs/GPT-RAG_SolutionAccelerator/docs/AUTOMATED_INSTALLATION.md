@@ -1,4 +1,4 @@
-# Custom Installation for Zero Trust
+﻿# Custom Installation for Zero Trust
 
 This guide details the automated installation of the Solution Accelerator within a Zero Trust architecture. It leverages Bicep Infrastructure as Code (IaC) for efficient deployment and management of Azure resources. The guide includes prerequisites, a comprehensive list of required resources, and a step-by-step installation process, ensuring a streamlined setup that adheres to Zero Trust principles.
 
@@ -40,8 +40,9 @@ Alternatively, you can create a [**Custom Role**](MANUAL_CUSTOM_ROLE.md).
 
 Here is the complete list of resources for a standard Zero Trust deployment, including descriptions and SKUs. These defaults have been extensively tested in the automated installation. You can review them to adjust to your needs, considering usage factors like user volume and data.
 
-> [!TIP]
-> Review this list before deploying to ensure you have the necessary quota for deployment in the desired subscription and region.
+!!! tip
+    Review this list before deploying to ensure you have the necessary quota for deployment in the desired subscription and region.
+
 
 ### App Services
 
@@ -211,8 +212,9 @@ Here is the complete list of resources for a standard Zero Trust deployment, inc
 - Azure Location Location
 - Azure Environment Name (ex: gpt-rag-dev,  gpt-rag-poc, ...)
 
-> [!NOTE]
-> Choose a region with sufficient service quotas. Commonly tested regions include  `eastus`, `eastus2`, `westus3`.
+!!! note
+    Choose a region with sufficient service quotas. Commonly tested regions include  `eastus`, `eastus2`, `westus3`.
+
 
 **Review these points for potential customizations**
 
@@ -307,8 +309,9 @@ Run the `azd env set` commands if you want to customize the installation as indi
 azd provision
 ```
 
-> [!TIP]  
-> The regions we test most often are  `eastus`, `eastus2`, `westus3`.
+!!! tip
+    The regions we test most often are  `eastus`, `eastus2`, `westus3`.
+
 
 **5** Use the Virtual Machine with the Bastion connection (created in step 4) to proceed with the deployment.
    
@@ -344,8 +347,9 @@ azd env refresh
 azd deploy  
 ```  
 
-> [!IMPORTANT] 
-> Note: when running the ```azd init ...``` and ```azd env refresh```, use the same environment name, subscription, and region used in the initial provisioning of the infrastructure.  
+!!! info
+    Note: when running the ```azd init ...``` and ```azd env refresh```, use the same environment name, subscription, and region used in the initial provisioning of the infrastructure.  
+
    
 > **Note**: Add `-b agentic` if using the Agentic AutoGen-based orchestrator.
 > ```sh
@@ -370,8 +374,9 @@ The solution accelerator allows integration with other services to enhance the d
 | Bing Custom Search      | Orchestrator Function App    | https://api.bing.microsoft.com        |
 | MS Graph API            | Data Ingestion Function App  | https://graph.microsoft.com      |
 
-> [!TIP]
-> Use **Azure API Management** to secure API requests when connecting to external services.
+!!! tip
+    Use **Azure API Management** to secure API requests when connecting to external services.
+
 
 ### Extending Application Components
 

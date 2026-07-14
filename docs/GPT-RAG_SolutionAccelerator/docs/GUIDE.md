@@ -1,4 +1,4 @@
-# GPT-RAG User & Admin Guide
+﻿# GPT-RAG User & Admin Guide
 
 *This comprehensive guide provides both users and administrators with detailed instructions on deploying, configuring, and managing the GPT-RAG solution within a Zero Trust Architecture.*
 
@@ -57,7 +57,7 @@ The GPT-RAG Solution Accelerator follows a **modular approach**, consisting of t
 
 ### Protected Data Access with Zero Trust Design
 
-Adopting a **Zero Trust** approach in Azure, as implemented by the GPT-RAG Solution Accelerator, provides a strong **security foundation** to safeguard your organization’s data and resources. Instead of using public endpoints, which expose services to the internet and increase susceptibility to cyber threats, this architecture ensures all access occurs within a **secure, isolated network** environment, reducing the attack surface and mitigating the risk of unauthorized access.
+Adopting a **Zero Trust** approach in Azure, as implemented by the GPT-RAG Solution Accelerator, provides a strong **security foundation** to safeguard your organizationâ€™s data and resources. Instead of using public endpoints, which expose services to the internet and increase susceptibility to cyber threats, this architecture ensures all access occurs within a **secure, isolated network** environment, reducing the attack surface and mitigating the risk of unauthorized access.
 
 GPT-RAG's **Zero Trust** architecture with **private endpoints** ensures **network isolation** for sensitive data, enabling efficient Azure service integration without public IP exposure. This approach mitigates risks like data breaches and unauthorized access, creating a controlled environment that strengthens **data integrity** and confidentiality.
 
@@ -65,7 +65,7 @@ GPT-RAG's **Zero Trust** architecture with **private endpoints** ensures **netwo
 
 The GPT-RAG Solution Accelerator's **agentic orchestration** allows organizations to design **tailored orchestration flows** that coordinate multiple specialized agents. This customization ensures that complex queries are handled with precision and efficiency, leading to more accurate and contextually relevant AI responses.
 
-Additionally, the solution’s **custom chunking strategy** tailors content segmentation to fit the unique characteristics of different data types and document structures. Aligning chunking methods to data specifics enhances retrieval speed, accuracy, and AI responsiveness, ensuring information is precise and contextually relevant.
+Additionally, the solutionâ€™s **custom chunking strategy** tailors content segmentation to fit the unique characteristics of different data types and document structures. Aligning chunking methods to data specifics enhances retrieval speed, accuracy, and AI responsiveness, ensuring information is precise and contextually relevant.
 
 ## Concepts
 
@@ -105,8 +105,9 @@ Data ingestion is a crucial part of the solution, enabling the system to retriev
 2. **Data Preprocessing:** The documents are prepared for indexing in AI Search Index, including breaking them into smaller chunks and optimizing them for efficient searchability.
 3. **Indexing for Search:** The chunks are then indexed within Azure AI Search, allowing for efficient retrieval during query processing.
 
-> [!NOTE]  
-> The ingestion process uses a pull approach: an Azure AI Search indexer checks blob storage hourly, triggering a Function App to preprocess and chunk new documents for indexing. Execution frequency is configurable.
+!!! note
+    The ingestion process uses a pull approach: an Azure AI Search indexer checks blob storage hourly, triggering a Function App to preprocess and chunk new documents for indexing. Execution frequency is configurable.
+
 
 For more information about the data ingestion process take a look at the [GPT-RAG ingestion](https://github.com/Azure/gpt-rag-ingestion) function app repo.
 
@@ -122,14 +123,15 @@ The solution uses an **Agentic Orchestration** approach, enabling agents to oper
    - The GPT model generates a response based on the collected information.
 3. **Response Delivery:** The front-end application returns a grounded answer to the user.
 
-> [!NOTE]  
-> Running as a Function App, the orchestrator offers scalable and efficient management of agent operations.
+!!! note
+    Running as a Function App, the orchestrator offers scalable and efficient management of agent operations.
+
 
 For more information about the agentic orchestration take a look at the [GPT-RAG orchestration](https://github.com/Azure/gpt-rag-agentic) function app repo.
 
 ## Network Components
 
-The networking architecture for the GPT-RAG solution leverages Azure’s advanced features to ensure a secure, flexible, and isolated environment, adhering to Zero Trust principles through the use of private endpoints and stringent access controls.
+The networking architecture for the GPT-RAG solution leverages Azureâ€™s advanced features to ensure a secure, flexible, and isolated environment, adhering to Zero Trust principles through the use of private endpoints and stringent access controls.
 
 1. **Azure Virtual Network (VNet):** Provides a logically isolated network environment, segmented into subnets for different application tiers, ensuring organized and secure deployment of resources.
     
@@ -141,8 +143,9 @@ The networking architecture for the GPT-RAG solution leverages Azure’s advance
     
 5. **Azure Bastion:** Provides secure access for the development team to the VM used for GPT-RAG deployment via the Azure portal, without exposing it to the internet, ensuring secure and controlled deployment activities.
 
-> [!NOTE]  
-> The Infrastructure as Code (IaC) Bicep templates included in this solution accelerator allow you to automatically provision networking resources. The templates support customization so you can follow your organization's naming conventions and address range standards. Alternatively, if you prefer, you can choose to set up these resources manually.
+!!! note
+    The Infrastructure as Code (IaC) Bicep templates included in this solution accelerator allow you to automatically provision networking resources. The templates support customization so you can follow your organization's naming conventions and address range standards. Alternatively, if you prefer, you can choose to set up these resources manually.
+
 
 **External users** can connect securely via **Azure Front Door** with WAF. **Internal users** can access through **VPN** or **ExpressRoute**. **VNet Peering** or **Private Endpoints** can be configured to connect GPT-RAG resources to your VNet. Further configuration details will follow. 
 
@@ -193,8 +196,9 @@ Before uploading documents, ensure that you have the necessary permissions in Az
 
 - **Azure Role Required:** You must have the **Storage Blob Data Contributor** role assigned in Azure Entra ID for the storage account you will be accessing. This role allows you to upload and manage blobs within the storage containers.
 
-> [!NOTE]
-> If you do not have the required role, contact your Azure administrator to obtain the necessary permissions.
+!!! note
+    If you do not have the required role, contact your Azure administrator to obtain the necessary permissions.
+
 
 #### Procedure
 
@@ -212,8 +216,9 @@ Before uploading documents, ensure that you have the necessary permissions in Az
    ![Selecting documents storage account](../media/admin-guide-document-upload-portal-select-storage-account.png)
    <br>*Selecting documents storage account*
 
-> [!TIP]
-> It is the storage account **without** the suffixes **"ing"** or **"orc"**.
+!!! tip
+    It is the storage account **without** the suffixes **"ing"** or **"orc"**.
+
 
 4. **Navigate to the Documents Container:**
    - Within the selected storage account, click on **Containers** in the left-hand menu.
@@ -244,8 +249,9 @@ Before reindexing, ensure that you have the necessary permissions:
 
 - **Azure Role Required:** You must have the **Search Service Contributor** or **Search Index Data Contributor** role assigned in Azure Entra ID for the AI Search resource.
 
-> [!NOTE]
-> If you do not have the required role, contact your Azure administrator to obtain the necessary permissions.
+!!! note
+    If you do not have the required role, contact your Azure administrator to obtain the necessary permissions.
+
 
 #### **Procedure**
 
@@ -273,8 +279,9 @@ Before reindexing, ensure that you have the necessary permissions:
    ![AI Search Reindexing UI](../media/admin-guide-ai-search-reindex.png)
    <br>*AI Search Indexer UI*
 
-> [!TIP]
-> If you wish to reindex all content, click **Reset** before running the search index.
+!!! tip
+    If you wish to reindex all content, click **Reset** before running the search index.
+
 
 # How-to: Administration
 
@@ -294,8 +301,9 @@ This setup guide provides step-by-step instructions for provisioning a resource 
 - Confirm you have the required quota to provision resources in the chosen Azure region for deployment. <BR>For details on resources and SKUs, refer to the [Azure Resources](#azure-resources).
 - Agree to the Responsible AI terms by initiating the creation of an [Azure AI service](https://portal.azure.com/#create/Microsoft.CognitiveServicesAllInOne) resource in the portal. 
 
-> [!NOTE]
-> The last step is unnecessary if an Azure AI service resource already exists in the subscription. 
+!!! note
+    The last step is unnecessary if an Azure AI service resource already exists in the subscription. 
+
 
 #### Software pre-reqs
 
@@ -401,27 +409,31 @@ Select your preferred network setup:
    | **app-int-subnet**      | 10.0.0.128/26     |
    | **AzureBastionSubnet**  | 10.0.0.64/26      |
 
-> [!NOTE] 
-> Each `/26` subnet provides 59 usable IP addresses, with Azure reserving 5 addresses per subnet.
+!!! note
+    Each `/26` subnet provides 59 usable IP addresses, with Azure reserving 5 addresses per subnet.
+
 
 2. **Automatic Setup with Custom Address Ranges**  
    If custom addressing is required, you can adjust address ranges in the configuration files to prevent overlap with existing networks.
 
-> [!TIP]
-> Choose this option if you want custom addressing to avoid overlap with existing networks. This helps prevent issues with direct connections using VNet peering, VPN gateways, or ExpressRoute.
+!!! tip
+    Choose this option if you want custom addressing to avoid overlap with existing networks. This helps prevent issues with direct connections using VNet peering, VPN gateways, or ExpressRoute.
+
 
 3. **Manual Network Setup**  
    If you prefer to manually create the VNet, subnets, and other network resources, you can configure these outside of the Bicep templates, which will then deploy only the non-network resources.
 
-> [!TIP]
-> Choose this option if deploying across subscriptions (e.g., Connectivity subscription) or if you want to adopt a network topology different from the provided architecture.
+!!! tip
+    Choose this option if deploying across subscriptions (e.g., Connectivity subscription) or if you want to adopt a network topology different from the provided architecture.
+
 
 #### Reusing Existing Resources
 
 To optimize your setup, you can reuse non-networking resources already deployed within the same subscription, such as Azure OpenAI, Cosmos DB, and Key Vault. If you choose to reuse any of these resources, ensure you have their names and resource group details ready.
 
-> [!IMPORTANT]
-> If you’re reusing an existing Virtual Network (VNet), you must manually create all related network resources. This includes configuring subnets, private endpoints, and network interfaces as outlined in the **Manual Network Setup** scenario. In this case, the Bicep templates will not deploy network resources automatically when an existing VNet is reused.
+!!! info
+    If youâ€™re reusing an existing Virtual Network (VNet), you must manually create all related network resources. This includes configuring subnets, private endpoints, and network interfaces as outlined in the **Manual Network Setup** scenario. In this case, the Bicep templates will not deploy network resources automatically when an existing VNet is reused.
+
 
 #### Resource Naming and Tagging
 
@@ -546,7 +558,7 @@ This section is intended for those who have chosen to manually create their netw
 
 ![Zero Trust Architecture](../media/admin-guide-vnet.png)
 
-We recommend following this network topology to align with the Zero Trust architecture. However, you may use your organization’s VNet and subnet standards if preferred. For reference, the default addressing used in the Bicep template is shown below:
+We recommend following this network topology to align with the Zero Trust architecture. However, you may use your organizationâ€™s VNet and subnet standards if preferred. For reference, the default addressing used in the Bicep template is shown below:
 
 | **Name**                 | **Address Range** |
 |--------------------------|-------------------|
@@ -557,8 +569,9 @@ We recommend following this network topology to align with the Zero Trust archit
 | app-int-subnet           | 10.0.0.128/26     |
 | AzureBastionSubnet       | 10.0.0.64/26      |
 
-> [!IMPORTANT]
-> Use network addressing that avoids overlaps with your existing VNets. Overlapping address ranges prevent direct connections via VNet peering, VPN gateways, or ExpressRoute.
+!!! info
+    Use network addressing that avoids overlaps with your existing VNets. Overlapping address ranges prevent direct connections via VNet peering, VPN gateways, or ExpressRoute.
+
 
 #### 10.2. Set Up Private Endpoints
 
@@ -621,8 +634,9 @@ Use this configuration for the VM:
 
 Deploy the application components by connecting through the Data Science VM with Bastion (Step 9 or manual setup in Step 10) or by directly accessing the VNet via a secure connection like ExpressRoute or VPN.
 
-> [!NOTE]
-> If you have direct VNet access, you can deploy from your own machine, eliminating the need for a Bastion VM. Instructions for both options are below.
+!!! note
+    If you have direct VNet access, you can deploy from your own machine, eliminating the need for a Bastion VM. Instructions for both options are below.
+
 
 **Access VNet from Your Machine**:
 
@@ -641,8 +655,9 @@ azd deploy
 
 3. Create a new directory and initialize deployment:
 
-> [!Important]  
-> Use the same environment name, subscription, and region as initial provisioning.
+!!! info
+    Use the same environment name, subscription, and region as initial provisioning.
+
 
    ```sh
    mkdir deploy
@@ -654,13 +669,15 @@ azd deploy
    azd deploy
    ```
 
-🎉 **Congratulations! Your Zero Trust deployment is now complete.**
+ðŸŽ‰ **Congratulations! Your Zero Trust deployment is now complete.**
 
-> [!Note]
-> If you want to upload documents for ingestion into the GPT-RAG storage account, you must have the **Storage Blob Data Contributor** role assigned in Azure Entra ID.
+!!! note
+    If you want to upload documents for ingestion into the GPT-RAG storage account, you must have the **Storage Blob Data Contributor** role assigned in Azure Entra ID.
 
-> [!Note]  
-> After the initial deployment, you may choose to customize or update specific features, such as adjusting prompts, adding a logo to the frontend, testing different chunking strategies, or configuring a custom orchestration strategy like NL2SQL. For detailed guidance on these optional customizations, refer to the deployment section in each component's repository. [Orchestrator](https://github.com/azure/gpt-rag-agentic), [Front-end](https://github.com/azure/gpt-rag-frontend), [Data Ingestion](https://github.com/Azure/gpt-rag-ingestion).
+
+!!! note
+    After the initial deployment, you may choose to customize or update specific features, such as adjusting prompts, adding a logo to the frontend, testing different chunking strategies, or configuring a custom orchestration strategy like NL2SQL. For detailed guidance on these optional customizations, refer to the deployment section in each component's repository. [Orchestrator](https://github.com/azure/gpt-rag-agentic), [Front-end](https://github.com/azure/gpt-rag-frontend), [Data Ingestion](https://github.com/Azure/gpt-rag-ingestion).
+
 
 ## Network Configuration Scenarios
 
@@ -689,8 +706,9 @@ The setup includes a VNet, five subnets, a Network Security Group (NSG) for each
 
 This option is ideal for users who want a hassle-free setup with optimal security and connectivity configurations predefined by GPT-RAG.
 
-> [!NOTE]  
-> **DNS Configuration:** When allowing GPT-RAG to create Private DNS Zones automatically, they will be created within the GPT-RAG resource group. If you prefer to configure them in your Connectivity subscription, choose the manual network configuration option (Scenario 3).
+!!! note
+    **DNS Configuration:** When allowing GPT-RAG to create Private DNS Zones automatically, they will be created within the GPT-RAG resource group. If you prefer to configure them in your Connectivity subscription, choose the manual network configuration option (Scenario 3).
+
 
 ### 2. Automatic Creation with Custom Addressing
 
@@ -726,15 +744,17 @@ Example: `azd env set AZURE_AI_SUBNET_PREFIX 10.0.0.16/26`.
 
 If you need full control over network resources or are integrating GPT-RAG into a complex environment, you can manually create the necessary network resources. This approach is ideal for organizations with specific networking requirements or strict security policies. Refer to [Manually Configure Network Resources](#10-manually-configure-network-resources-optional) in the deployment procedure for more details on setting up your network.
 
-> [!NOTE]
-> **User Connectivity:** Regardless of the network configuration approach you select, you may need to configure additional network settings to enable connectivity for external or internal users. Refer to the **Internal User Access** and **Internal User Access** sections in this guide for detailed instructions tailored to your specific access requirements.
+!!! note
+    **User Connectivity:** Regardless of the network configuration approach you select, you may need to configure additional network settings to enable connectivity for external or internal users. Refer to the **Internal User Access** and **Internal User Access** sections in this guide for detailed instructions tailored to your specific access requirements.
+
 
 ## Accessing the Data Science VM via Bastion
 
 After deploying the Solution Accelerator, administrators and dev teams may need to access a Test Virtual Machine (VM) for configuration, customization, or deployment tasks. This section outlines the procedure for connecting to the Data Science VM using Azure Bastion.
 
-> [!NOTE]
-> If these users already have secure access to the VNet through ExpressRoute or VPN, they can perform the required tasks directly from their own machines, removing the need for a Bastion VM and making its creation optional.
+!!! note
+    If these users already have secure access to the VNet through ExpressRoute or VPN, they can perform the required tasks directly from their own machines, removing the need for a Bastion VM and making its creation optional.
+
 
 ### **Prerequisites**
 
@@ -759,8 +779,9 @@ Follow these steps to securely connect to the Data Science VM through Azure Bast
    ![Bastion Connection Screen](../media/readme-keyvault-login.png)
    <br>*Bastion Connection Interface*
 
-> [!NOTE]
-> The Data Science VM accessed through Bastion is intended solely for administrators and configuration personnel and is not meant for end-users. It is designed for individuals responsible for configuring, customizing, or updating the solution.
+!!! note
+    The Data Science VM accessed through Bastion is intended solely for administrators and configuration personnel and is not meant for end-users. It is designed for individuals responsible for configuring, customizing, or updating the solution.
+
 
 ## Internal User Access
 
@@ -783,7 +804,7 @@ The following diagram illustrates a scenario using VNet Peering to allow interna
 ![Diagram illustrating VNet Peering](../media/admin-guide-vnet-peering-diagram.png)
 <br>*VNet Peering*
 
-To simplify, the diagram only includes the App Service frontend’s Private Endpoint and DNS configuration **azurewebsites.net**. Uploading documents requires DNS setup for the Storage Account **blob.core.windows.net**, and reindexing the AI Search index needs DNS configuration for the search service domain **search.windows.net**.
+To simplify, the diagram only includes the App Service frontendâ€™s Private Endpoint and DNS configuration **azurewebsites.net**. Uploading documents requires DNS setup for the Storage Account **blob.core.windows.net**, and reindexing the AI Search index needs DNS configuration for the search service domain **search.windows.net**.
 
 #### Pre-requisites
 
@@ -850,16 +871,18 @@ Configure **Azure Front Door** in conjunction with a **Web Application Firewall 
 
 To set up Front Door and WAF, follow the instructions in the [Create an Azure Front Door using Azure portal](https://learn.microsoft.com/en-us/azure/frontdoor/create-front-door-portal) page.
 
-> [!NOTE]
-> Alternatively, Front Door and WAF can be deployed within the same Subscription and resource group as GPT-RAG to streamline the configuration process.
+!!! note
+    Alternatively, Front Door and WAF can be deployed within the same Subscription and resource group as GPT-RAG to streamline the configuration process.
+
 
 
 ### Configuring IP Allowlist
 
 With the **Private Endpoint** already set up for **App Service**, you can still configure an IP allowlist for specific cases, such as temporary access to the frontend for quick testing. This setup ensures that only trusted sources with pre-approved IPs can access the service publicly when necessary.
 
-> [!IMPORTANT]  
-> Use this approach for short-term access, such as quick testing or setup for a small group of users. It’s a simple control but relies on a public endpoint, so apply it only when necessary for specific cases.
+!!! info
+    Use this approach for short-term access, such as quick testing or setup for a small group of users. Itâ€™s a simple control but relies on a public endpoint, so apply it only when necessary for specific cases.
+
 
 #### **Pre-requisites**
 
@@ -912,7 +935,7 @@ This section outlines the steps to configure a custom MSAL-based authentication 
    This path must match the environment variable `REDIRECT_PATH` configured in your code (defaults to `/getAToken`).  
 5. Click **Register**.  
 
-> **Note**: After registration, copy the **Application (client) ID**—you will set it in the environment as `CLIENT_ID`.
+> **Note**: After registration, copy the **Application (client) ID**â€”you will set it in the environment as `CLIENT_ID`.
 
 ### 2. Create and Store the Client Secret
 
@@ -938,13 +961,13 @@ Below are the key environment variables that must be set in your front-end App S
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | **ENABLE_AUTHENTICATION**           | Controls if MSAL-based authentication is enabled. Set to `"true"` or `"false"`.                                          | `"true"`                                                              |
 | **CLIENT_ID**                       | The Client ID (Application ID) of your Azure AD app registration.                                                         | `"00000000-0000-0000-0000-000000000000"`                             |
-| **APP_SERVICE_CLIENT_SECRET_NAME**  | Name of the secret in Key Vault that stores your app registration’s client secret.                                        | `"appServiceClientSecretKey"`                                        |
+| **APP_SERVICE_CLIENT_SECRET_NAME**  | Name of the secret in Key Vault that stores your app registrationâ€™s client secret.                                        | `"appServiceClientSecretKey"`                                        |
 | **AUTHORITY**                       | The authority / tenant ID for Azure AD.                                                                                  | `"https://login.microsoftonline.com/your_tenant_id"`                 |
 | **REDIRECT_PATH**                   | The path the identity provider will redirect back to after sign-in.                                                      | `"/getAToken"`                                                        |
 | **OTHER_AUTH_SCOPES**               | A comma-separated list of additional API scopes (beyond "User.Read").                                                    | `"https://analysis.windows.net/powerbi/api/.default,SomeOther.Scope"` |
-| **FLASK_SECRET_KEY_NAME**           | Name of the secret in Key Vault that stores your Flask session key (only if you’re using Flask-based sessions). | `"flaskSecretKey"` |  
-| **SESSION_SECRET_KEY**              | Name of the secret in Key Vault that stores your FastAPI session key (only if you’re using a FastAPI-based front-end). | `"sessionSecretKey"` |  
-| **FORWARD_ACCESS_TOKEN_TO_ORCHESTRATOR** | A boolean indicating whether the user's access token should be included in the payload sent to the orchestrator. This is only required when the app registration must access APIs on behalf of the user (e.g., Power BI REST API, where permissions are delegated from the user rather than the app). When set to `"true"`, the payload sent to the orchestrator (`/chatgpt` endpoint) will include the following fields: <br> - **`client_principal_id`**: The user’s Object ID in Azure AD. <br> - **`client_principal_name`**: The user’s UPN or preferred username. <br> - **`access_token`**: The valid access token for additional APIs (included only if acquired). | `"true"` |
+| **FLASK_SECRET_KEY_NAME**           | Name of the secret in Key Vault that stores your Flask session key (only if youâ€™re using Flask-based sessions). | `"flaskSecretKey"` |  
+| **SESSION_SECRET_KEY**              | Name of the secret in Key Vault that stores your FastAPI session key (only if youâ€™re using a FastAPI-based front-end). | `"sessionSecretKey"` |  
+| **FORWARD_ACCESS_TOKEN_TO_ORCHESTRATOR** | A boolean indicating whether the user's access token should be included in the payload sent to the orchestrator. This is only required when the app registration must access APIs on behalf of the user (e.g., Power BI REST API, where permissions are delegated from the user rather than the app). When set to `"true"`, the payload sent to the orchestrator (`/chatgpt` endpoint) will include the following fields: <br> - **`client_principal_id`**: The userâ€™s Object ID in Azure AD. <br> - **`client_principal_name`**: The userâ€™s UPN or preferred username. <br> - **`access_token`**: The valid access token for additional APIs (included only if acquired). | `"true"` |
 
 
 > **Important**: If you plan to use the Power BI REST API, you must include the following scope in `OTHER_AUTH_SCOPES`:
@@ -958,14 +981,14 @@ Below are the key environment variables that must be set in your front-end App S
 In the Azure AD app registration:
 - Go to **Authentication**.  
 - Under **Redirect URIs**, ensure the URI you used in step 1.4 is listed (e.g., `https://<your-frontend-app-url>/getAToken`).  
-- If needed, add additional reply URLs that match your deployment’s domain(s).  
+- If needed, add additional reply URLs that match your deploymentâ€™s domain(s).  
 
 ### 5. Validation and Testing
 
 1. **Enable authentication** in your front-end app by setting `ENABLE_AUTHENTICATION = "true"`.  
 2. Navigate to your front-end URL.  
    - If you are not signed in, you will be redirected to the Microsoft login page.  
-   - After successful sign-in, you will be redirected back to your application’s `REDIRECT_PATH` (e.g., `/getAToken`).  
+   - After successful sign-in, you will be redirected back to your applicationâ€™s `REDIRECT_PATH` (e.g., `/getAToken`).  
 3. If you have included extra scopes in `OTHER_AUTH_SCOPES` (e.g., Power BI), the code attempts to silently acquire tokens for those scopes as well.  
 4. Confirm that the necessary tokens are being retrieved by observing the logs or the session state.
 
@@ -1013,7 +1036,7 @@ Control user access within front-end application using **user principal IDs**, *
 
 3. **Set Environment Variables**
 
-   In your application's settings, populate the environment variables needed to define which users or groups can access the application. You don’t need to create all three—just the ones relevant to your authorization setup:
+   In your application's settings, populate the environment variables needed to define which users or groups can access the application. You donâ€™t need to create all threeâ€”just the ones relevant to your authorization setup:
 
    - Use `AUTHORIZED_USER_PRINCIPALS` if you want to specify user principal IDs (e.g., `user-principal-id-1`).
    - Use `AUTHORIZED_USER_NAMES` if you want to specify usernames (e.g., `user1@example.com,user2@example.com`).
@@ -1034,8 +1057,9 @@ Based on your authorization setup, validate access:
 - **Username**: Log in as a username in `AUTHORIZED_USER_NAMES` and confirm access.
 - **Group Membership**: Log in as a group member from `AUTHORIZED_GROUP_NAMES` to ensure access.
 
-> [!NOTE]
-> Use and test only the methods you have configured to ensure access controls are functioning correctly.
+!!! note
+    Use and test only the methods you have configured to ensure access controls are functioning correctly.
+
 
 ## NL2SQL and Fabric Setup
 
@@ -1047,8 +1071,9 @@ To learn how this scenario works and configure it, check the [NL2SQL and Fabric 
 
 To enable GPT-RAG to use multimodal capabilities, such as those provided by GPT-4o, set the `MULTIMODAL` environment variable to `true` in the data ingestion and set the `multimodal_rag` agent strategy in agentic orchestration Function Apps. For more details on how multimodality works and image data is ingested, refer to [Multimodal RAG Overview](MULTIMODAL_RAG.md) and the documentation in the data ingestion repository: [Multimodal Ingestion](https://github.com/Azure/gpt-rag-ingestion?tab=readme-ov-file#multimodal-ingestion) respectively.
 
-> [!NOTE]
-> Currently, only the Agentic Orchestrator supports this feature.
+!!! note
+    Currently, only the Agentic Orchestrator supports this feature.
+
 
 ## SharePoint Setup
 
@@ -1062,7 +1087,7 @@ The Speech Avatar leverages Azure Speech Services, Azure Key Vault, and Azure Ap
 
 ## Search Trimming
 
-This customization is particularly valuable in scenarios where sensitive documents need to be accessed by specific groups or individuals within an organization. With this feature you can ensure that AI Search returns results tailored to each user’s access (no RBAC permissions), please take a look at the [Filter Files with AI Search Using Security Trimming](CUSTOMIZATIONS_SEARCH_TRIMMING.md) page.
+This customization is particularly valuable in scenarios where sensitive documents need to be accessed by specific groups or individuals within an organization. With this feature you can ensure that AI Search returns results tailored to each userâ€™s access (no RBAC permissions), please take a look at the [Filter Files with AI Search Using Security Trimming](CUSTOMIZATIONS_SEARCH_TRIMMING.md) page.
 
 ## Bring Your Own Resources
 
@@ -1083,10 +1108,11 @@ The Solution Accelerator is structured across four primary Git repositories:
 
 ### Option 1: Using Repositories as Templates (Most Common)
 
-If you'd like to use the repositories as a starting point without making updates to the original, you can use GitHub's template feature. This will create an independent copy of the repository, which you can fully customize. However, keep in mind that this option won’t automatically sync with future updates from the original repository.
+If you'd like to use the repositories as a starting point without making updates to the original, you can use GitHub's template feature. This will create an independent copy of the repository, which you can fully customize. However, keep in mind that this option wonâ€™t automatically sync with future updates from the original repository.
 
-> [!NOTE]
-> The following steps should be performed for each of the four Solution Accelerator repositories: **gpt-rag**, **gpt-rag-ingestion**, **gpt-rag-agentic**, and **gpt-rag-frontend**.
+!!! note
+    The following steps should be performed for each of the four Solution Accelerator repositories: **gpt-rag**, **gpt-rag-ingestion**, **gpt-rag-agentic**, and **gpt-rag-frontend**.
+
 
 #### Option 1.1: Setting Up GitHub Repositories
 
@@ -1171,8 +1197,9 @@ If you intend to contribute to the ongoing development of the Solution Accelerat
 
 Here is the complete list of resources for a standard Zero Trust deployment, including descriptions and SKUs. These defaults have been extensively tested in the automated installation. You can review them to adjust to your needs, considering usage factors like user volume and data.
 
-> [!TIP]
-> Review this list before deploying to ensure you have the necessary quota for deployment in the desired subscription and region.
+!!! tip
+    Review this list before deploying to ensure you have the necessary quota for deployment in the desired subscription and region.
+
 
 #### App Services
 
@@ -1372,8 +1399,9 @@ The following table provides a detailed overview of the required roles across di
 | **Source Docs Storage Account**             | Storage Blob Data Reader          | Azure AI Search               | Grants read access to search service.                                                           |
 | **Source Docs Storage Account**             | Storage Blob Data Reader          | Orchestrator Function App     | Allows reading source documents from the storage account.                                       |
 
-> [!Note]
-> Permissions for external resource connections, such as SQL databases (for NL2SQL), Fabric, or SharePoint, are covered in a separate section dedicated to connection setup.
+!!! note
+    Permissions for external resource connections, such as SQL databases (for NL2SQL), Fabric, or SharePoint, are covered in a separate section dedicated to connection setup.
+
 
 ### 4. User-Specific Permissions  
 

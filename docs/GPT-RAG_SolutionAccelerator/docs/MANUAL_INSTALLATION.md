@@ -1,4 +1,4 @@
-# Manual Installation for Zero Trust
+﻿# Manual Installation for Zero Trust
 
 This guide details the manual installation of the Solution Accelerator within a Zero Trust architecture. It includes prerequisites, a comprehensive list of required resources, and a step-by-step installation process.
 
@@ -252,8 +252,9 @@ Gather Necessary Information:
         - Create the Azure Key Vault
         - Disable public access.
           
-> [!NOTE]
-> Create the Key Vault without any secrets, as we are currently using Managed Identities for services to access other services. However, it will still be useful for storing secrets such as API keys or credentials if needed.
+!!! note
+    Create the Key Vault without any secrets, as we are currently using Managed Identities for services to access other services. However, it will still be useful for storing secrets such as API keys or credentials if needed.
+
 
 8. **App Services**
 
@@ -402,7 +403,7 @@ Gather Necessary Information:
 
 13. **Application Deployment**
 
-    - Once resources are provisioned and settings configured, you’re ready to deploy each application.
+    - Once resources are provisioned and settings configured, youâ€™re ready to deploy each application.
     - First clone the repositories for each application.
     - For the Orchestrator Function App and Data Ingestion Function App:
       - In VSCode with the [Azure Function App Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions), go to the *Azure* panel, locate your Function App in the resource explorer, right-click on it, and select *Deploy*.

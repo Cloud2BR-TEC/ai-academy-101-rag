@@ -1,9 +1,10 @@
-# Multi-Environment GitHub Setup
+﻿# Multi-Environment GitHub Setup
 
 This document outlines the steps to set up a multi-environment workflow to deploy infrastructure and services to Azure using GitHub Actions, taking the solution from proof of concept to production-ready.
 
-> [!NOTE]
-> Note that additional steps may be required when working with the Zero Trust Architecture Deployment to handle deploying to a network-isolated environment. This guide is currently focused on deploying the Basic Architecture Deployment.
+!!! note
+    Note that additional steps may be required when working with the Zero Trust Architecture Deployment to handle deploying to a network-isolated environment. This guide is currently focused on deploying the Basic Architecture Deployment.
+
 
 # Assumptions:
 
@@ -39,9 +40,10 @@ This document outlines the steps to set up a multi-environment workflow to deplo
 
 # Steps:
 
-> [!NOTE]
-> 1. All commands below are to be run in a Bash shell.
-> 2. This guide aims to provide automated/programmatic steps for pipeline setup where possible. Manual setup is also possible, but not covered extensively in this guide. Please read more about manual pipeline setup [here](https://github.com/Azure/azure-dev/blob/main/cli/azd/docs/manual-pipeline-config.md).
+!!! note
+    1. All commands below are to be run in a Bash shell.
+    2. This guide aims to provide automated/programmatic steps for pipeline setup where possible. Manual setup is also possible, but not covered extensively in this guide. Please read more about manual pipeline setup [here](https://github.com/Azure/azure-dev/blob/main/cli/azd/docs/manual-pipeline-config.md).
+
 
 ## 1. Create azd environments & Service Principals
 
@@ -69,8 +71,9 @@ Next, you will create an `azd` environment per target environment alongside a pi
 
 For each below environment, when running `azd pipeline config` for each environment, choose your target Azure subscription and Azure location. When prompted to commit and push your local changes to start the configured CI pipeline, enter 'N'.
 
-> [!CAUTION]
-> If you choose 'Y' to commit and push your local changes, the pipeline will be triggered, and you may not have the necessary environments or variables set up yet, causing the pipeline to fail. The remaining setup steps must be completed before the pipeline will run successfully.
+!!! warning
+    If you choose 'Y' to commit and push your local changes, the pipeline will be triggered, and you may not have the necessary environments or variables set up yet, causing the pipeline to fail. The remaining setup steps must be completed before the pipeline will run successfully.
+
 
 Log into the CLI tools that will be used:
 
@@ -101,11 +104,13 @@ azd env new $prod_env
 azd pipeline config --auth-type federated --principal-name $prod_principal_name --provider github
 ```
 
-> [!NOTE]
-> Note that `azd pipeline config` creates a new Service Principal for each environment.
+!!! note
+    Note that `azd pipeline config` creates a new Service Principal for each environment.
 
-> [!NOTE]
-> By default, `azd pipeline config` uses OpenID Connect (OIDC), called federated credentials. If you'd rather not use OIDC, run `azd pipeline config --auth-type client-credentials`. This scenario is not covered in this guide.
+
+!!! note
+    By default, `azd pipeline config` uses OpenID Connect (OIDC), called federated credentials. If you'd rather not use OIDC, run `azd pipeline config --auth-type client-credentials`. This scenario is not covered in this guide.
+
 
 After performing the above steps, you will see corresponding files to your azd environments in the `.azure` folder.
 
@@ -140,8 +145,9 @@ gh api --method PUT -H "Accept: application/vnd.github+json" repos/$org/$repo/en
 
 Configure the repository and environment variables: Delete the `AZURE_CLIENT_ID` and `AZURE_ENV_NAME` variables at the repository level as they aren't needed and only represent what was set for the environment you created last. `AZURE_CLIENT_ID` will be reconfigured at the environment level, and `AZURE_ENV_NAME` will be passed as an input to the deploy job.
 
-> [!IMPORTANT]
-> At a minimum, the `AZURE_CLIENT_ID` variable must be set at the environment level for each environment. If you would like to set up additional variables at the environment level, you may do so by using an approach similar to the one described in this section. For example, if you want to use a different subscription for each environment, `AZURE_SUBSCRIPTION_ID` should be deleted at the repository level and recreated at the environment level. If you want to use a different location for each environment, `AZURE_LOCATION` should be deleted at the repository level and recreated at the environment level.
+!!! info
+    At a minimum, the `AZURE_CLIENT_ID` variable must be set at the environment level for each environment. If you would like to set up additional variables at the environment level, you may do so by using an approach similar to the one described in this section. For example, if you want to use a different subscription for each environment, `AZURE_SUBSCRIPTION_ID` should be deleted at the repository level and recreated at the environment level. If you want to use a different location for each environment, `AZURE_LOCATION` should be deleted at the repository level and recreated at the environment level.
+
 
 ```bash
 gh variable delete AZURE_CLIENT_ID
@@ -156,19 +162,21 @@ test_client_id=$(az ad sp list --display-name $test_principal_name --query "[].a
 prod_client_id=$(az ad sp list --display-name $prod_principal_name --query "[].appId" --output tsv)
 ```
 
-> [!TIP]
-> Verify that the variables are set by printing them out with `echo $<env>_client_id`.
+!!! tip
+    Verify that the variables are set by printing them out with `echo $<env>_client_id`.
 
-> [!NOTE]
-> _Alternative approach to get the client IDs in the above steps:_
-> In the event that there are multiple Service Principals containing the same name, the `az ad sp list` command executed above may not pull the correct ID. You may execute an alternate command to manually review the list of Service Principals by name and ID. The command to do this is exemplified below for the dev environment.
->
-> ```bash
-> az ad sp list --display-name $dev_principal_name --query "[].{DisplayName:displayName, AppId:appId}" --output table # return results in a table format
-> dev_client_id='<guid>' # manually assign the correct client ID
-> ```
->
-> Also note you may get the client IDs from the Azure Portal.
+
+!!! note
+    _Alternative approach to get the client IDs in the above steps:_
+    In the event that there are multiple Service Principals containing the same name, the `az ad sp list` command executed above may not pull the correct ID. You may execute an alternate command to manually review the list of Service Principals by name and ID. The command to do this is exemplified below for the dev environment.
+    
+    ```bash
+    az ad sp list --display-name $dev_principal_name --query "[].{DisplayName:displayName, AppId:appId}" --output table # return results in a table format
+    dev_client_id='<guid>' # manually assign the correct client ID
+    ```
+    
+    Also note you may get the client IDs from the Azure Portal.
+
 
 Set these values as variables at the environment level:
 
@@ -178,11 +186,13 @@ gh variable set AZURE_CLIENT_ID -b $test_client_id -e $test_env
 gh variable set AZURE_CLIENT_ID -b $prod_client_id -e $prod_env
 ```
 
-> [!TIP]
-> After environments are created, set up deployment protection rules for each environment. See [this article](https://docs.github.com/en/actions/administering-github-actions/managing-environments-for-deployment#deployment-protection-rules) for more. While approvers are not always necessary on the development environment, they are crucial for all other environments.
+!!! tip
+    After environments are created, set up deployment protection rules for each environment. See [this article](https://docs.github.com/en/actions/administering-github-actions/managing-environments-for-deployment#deployment-protection-rules) for more. While approvers are not always necessary on the development environment, they are crucial for all other environments.
 
-> [!NOTE]
-> If you want to manage and authenticate with a client secret rather than using federated identity, you would need to create a secret for each Service Principal, store it as an environment secret in GitHub, and modify the workflow to use the secret for authentication. This is not covered in this example. If you choose to use a client secret, you may skip 3.
+
+!!! note
+    If you want to manage and authenticate with a client secret rather than using federated identity, you would need to create a secret for each Service Principal, store it as an environment secret in GitHub, and modify the workflow to use the secret for authentication. This is not covered in this example. If you choose to use a client secret, you may skip 3.
+
 
 ## 3. Configure Azure Federated credentials to use newly set up GitHub environments
 
@@ -204,14 +214,16 @@ az ad app federated-credential create --id $prod_client_id --parameters ./federa
 rm federated_id.json # clean up temp file
 ```
 
-> [!NOTE]
-> The existing/unmodified federated credentials created by Azure Developer CLI in the Service Principals may be deleted.
+!!! note
+    The existing/unmodified federated credentials created by Azure Developer CLI in the Service Principals may be deleted.
+
 
 ## 4. Modify the workflow files as needed for deployment
 
-> [!IMPORTANT]
-> - The environment names in the below described `azure-dev.yml` **need to be edited to match the environment names you created**. In the file, these values are passed into the template as the `AZURE_ENV_NAME`, with a comment stating `edit to match the name of your environment`. _If you don't edit these values, the workflow will not work properly_.
-> - The `workflow_dispatch` in the `azure-dev.yml` file is set to trigger on push to a branch `none`. You may modify this to trigger on a specific branch or event.
+!!! info
+    - The environment names in the below described `azure-dev.yml` **need to be edited to match the environment names you created**. In the file, these values are passed into the template as the `AZURE_ENV_NAME`, with a comment stating `edit to match the name of your environment`. _If you don't edit these values, the workflow will not work properly_.
+    - The `workflow_dispatch` in the `azure-dev.yml` file is set to trigger on push to a branch `none`. You may modify this to trigger on a specific branch or event.
+
 
 - The following files in the `.github/workflows` folder are used to deploy the infrastructure and services to Azure:
   - `azure-dev.yml`

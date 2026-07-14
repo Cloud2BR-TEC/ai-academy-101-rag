@@ -1,9 +1,10 @@
-# Demonstration: Azure Open AI \& AI Foundry Pricing 
+﻿# Demonstration: Azure Open AI \& AI Foundry Pricing 
 
 ----------
 
-> [!NOTE]
-> Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
+!!! note
+    Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
+
 
 <details>
 <summary><b>List of References </b> (Click to expand)</summary>
@@ -48,10 +49,11 @@ Azure OpenAI Service supports different pricing models, including:
 
 > The Pay-As-You-Go model `charges solely based on the cumulative number of tokens processed`. To accurately estimate your costs, first determine the total tokens processed per call by adding the tokens from both the prompt and the response. Then, scale that figure by your total number of calls over your desired period.
 
-> [!NOTE]
->
-> - Adjust the token counts and cost rate according to the specific model series or deployment region, as pricing may vary. <br/>
-> - For the most up-to-date cost details and additional pricing factors, please review the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) and [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/?msockid=38ec3806873362243e122ce086486339#pricing) page.
+!!! note
+    
+    - Adjust the token counts and cost rate according to the specific model series or deployment region, as pricing may vary. <br/>
+    - For the most up-to-date cost details and additional pricing factors, please review the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) and [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/?msockid=38ec3806873362243e122ce086486339#pricing) page.
+
 
 > **Calculation Formula:**
 
@@ -77,24 +79,24 @@ $$
 <summary><strong>Definitions</strong></summary>
 
 - **Use Case**: The scenario being measured (e.g., Small Chatbot Interaction, Enterprise QA Assistant, Bulk Content Generation).
-- **Model**: The optional model choice (e.g., GPT‑3.5‑turbo, GPT‑4 with 8K/32K context) based on your needs.
+- **Model**: The optional model choice (e.g., GPTâ€‘3.5â€‘turbo, GPTâ€‘4 with 8K/32K context) based on your needs.
 - **Daily Count**: Number of interactions or API calls `per day.`
 - **Avg Input Tokens**: Average tokens in the prompt `per interaction.`
 - **Avg Output Tokens**: Average tokens in the completion `per interaction.`
-- **Daily Input Tokens**: Daily Count × Avg Input Tokens.
-- **Daily Output Tokens**: Daily Count × Avg Output Tokens.
+- **Daily Input Tokens**: Daily Count Ã— Avg Input Tokens.
+- **Daily Output Tokens**: Daily Count Ã— Avg Output Tokens.
 - **Daily Total Tokens**: Sum of daily input and output tokens.
-- **Monthly Input Tokens**: Daily Input Tokens × 30.
-- **Monthly Output Tokens**: Daily Output Tokens × 30.
+- **Monthly Input Tokens**: Daily Input Tokens Ã— 30.
+- **Monthly Output Tokens**: Daily Output Tokens Ã— 30.
 - **Monthly Total Tokens**: Sum of monthly input and output tokens.
 
 </details>
 
 | **Use Case**                | **Model (Optional)** | **Daily Count** | **Avg Input Tokens** | **Avg Output Tokens** | **Daily Input Tokens** | **Daily Output Tokens** | **Daily Total Tokens** | **Monthly Input Tokens** | **Monthly Output Tokens** | **Monthly Total Tokens** |
 |-----------------------------|---------------------------------------------------------------------------|-----------------|----------------------|-----------------------|------------------------|-------------------------|------------------------|--------------------------|---------------------------|--------------------------|
-| **Small Chatbot Interaction**   | (e.g., GPT‑3.5‑turbo or GPT‑4)                                           | 200             | 50                   | 150                   | 200 × 50 = 10,000      | 200 × 150 = 30,000      | 10,000 + 30,000 = 40,000| 10,000 × 30 = 300,000    | 30,000 × 30 = 900,000     | ~1,200,000               |
-| **Enterprise QA Assistant**     | (e.g., GPT‑4 with 8K or 32K context depending on precision needs)        | 500             | 100                  | 300                   | 500 × 100 = 50,000     | 500 × 300 = 150,000     | 50,000 + 150,000 = 200,000 | 50,000 × 30 = 1,500,000  | 150,000 × 30 = 4,500,000   | ~6,000,000                |
-| **Bulk Content Generation**     | (e.g., GPT‑3.5‑turbo or another efficient variant)                        | 2,000           | 100                  | 150                   | 2,000 × 100 = 200,000  | 2,000 × 150 = 300,000   | 200,000 + 300,000 = 500,000 | 200,000 × 30 = 6,000,000 | 300,000 × 30 = 9,000,000  | ~15,000,000              |
+| **Small Chatbot Interaction**   | (e.g., GPTâ€‘3.5â€‘turbo or GPTâ€‘4)                                           | 200             | 50                   | 150                   | 200 Ã— 50 = 10,000      | 200 Ã— 150 = 30,000      | 10,000 + 30,000 = 40,000| 10,000 Ã— 30 = 300,000    | 30,000 Ã— 30 = 900,000     | ~1,200,000               |
+| **Enterprise QA Assistant**     | (e.g., GPTâ€‘4 with 8K or 32K context depending on precision needs)        | 500             | 100                  | 300                   | 500 Ã— 100 = 50,000     | 500 Ã— 300 = 150,000     | 50,000 + 150,000 = 200,000 | 50,000 Ã— 30 = 1,500,000  | 150,000 Ã— 30 = 4,500,000   | ~6,000,000                |
+| **Bulk Content Generation**     | (e.g., GPTâ€‘3.5â€‘turbo or another efficient variant)                        | 2,000           | 100                  | 150                   | 2,000 Ã— 100 = 200,000  | 2,000 Ã— 150 = 300,000   | 200,000 + 300,000 = 500,000 | 200,000 Ã— 30 = 6,000,000 | 300,000 Ã— 30 = 9,000,000  | ~15,000,000              |
 
 <https://github.com/user-attachments/assets/9ede2347-faaf-42c7-8e4c-64ad7c461938>
 

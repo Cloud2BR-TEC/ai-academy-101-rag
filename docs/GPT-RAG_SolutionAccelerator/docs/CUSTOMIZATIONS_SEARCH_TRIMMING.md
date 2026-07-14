@@ -1,4 +1,4 @@
-# Filter Files with AI Search Using Security Trimming
+﻿# Filter Files with AI Search Using Security Trimming
 
 This customization allows the GPT-RAG solution to filter information during searches in AI Search based on a specific field defined in the index schema. **AI Search security trimming** ensures that only authorized users or groups can access specific search results by enforcing access control at query time. It checks the `metadata_security_id` field in the index against the user or group identifiers provided during the search.
 
@@ -19,8 +19,9 @@ In the following sections, we will provide detailed instructions on how to confi
    - `"client_principal_name"`: Principal name of the client.  
    - `"client_group_names"`: List of group names associated with the client.
 
-> [!NOTE]
-> Orchestrator Payload: These attributes are already added by the Frontend and populated correctly if authentication is properly configured.
+!!! note
+    Orchestrator Payload: These attributes are already added by the Frontend and populated correctly if authentication is properly configured.
+
 
 By default, the Security Trimming feature is activated and always returns documents where the `metadata_security_id` field is blank, ensuring broad accessibility when no specific restrictions are defined.
 
@@ -37,8 +38,9 @@ By default, the Security Trimming feature is activated and always returns docume
 3. **Check Deployment**:
    After deployment, verify that the AI Search index has been created with the `metadata_security_id` field and that the skillset mappings are functioning correctly.
 
-> [!NOTE]
-> For step 2, ensure that the `metadata_security_id` field follows this format: `['00000000-0000-0000-0000-000000000123', 'Group Name', '00000000-0000-0000-0000-000000000456']`. This field specifies who or which group can access the blob. Leave it blank if there are no access restrictions.
+!!! note
+    For step 2, ensure that the `metadata_security_id` field follows this format: `['00000000-0000-0000-0000-000000000123', 'Group Name', '00000000-0000-0000-0000-000000000456']`. This field specifies who or which group can access the blob. Leave it blank if there are no access restrictions.
+
 
 ## References:
 

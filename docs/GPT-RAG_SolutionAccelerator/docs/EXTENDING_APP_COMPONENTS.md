@@ -1,10 +1,10 @@
-# Extending application components
+﻿# Extending application components
 
 Azd provisions the infrastructure and deploys the components. To meet specific needs, you can customize the code, such as updating the [bot description](https://github.com/Azure/gpt-rag-orchestrator/blob/main/orc/bot_description.prompt) in the orchestrator to better define the bot's scope.
 
 This accelerator repositories are public, here are some options for extending its code in your projects: 
 
-- **Forking the GitHub repository**: Choose this option if you want to contribute to the original project or keep your version connected. If you fork into a private GitHub repository, you can’t submit pull requests back unless you make your fork public or create a public branch.
+- **Forking the GitHub repository**: Choose this option if you want to contribute to the original project or keep your version connected. If you fork into a private GitHub repository, you canâ€™t submit pull requests back unless you make your fork public or create a public branch.
 
 ![Extending Forking](../media/extending-forking.png)
 
@@ -20,8 +20,9 @@ This accelerator repositories are public, here are some options for extending it
 
 That said, if you want to manually deploy and customize the components, you can follow the deployment instructions for each component, as described in the following sections.
 
-> [!NOTE]
-> To deploy, you will only need the Contributor role in the resource group where the solution's resources are located.
+!!! note
+    To deploy, you will only need the Contributor role in the resource group where the solution's resources are located.
+
 
 ## **1) Data Ingestion Application**
 

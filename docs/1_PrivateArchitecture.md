@@ -1,4 +1,4 @@
-# Demonstration: Building a Private ChatBot with Azure OpenAI
+﻿# Demonstration: Building a Private ChatBot with Azure OpenAI
 
 ----------
 
@@ -78,14 +78,15 @@ Click here to see more about [Workflow in Zero Trust Architecture](./2_ZeroTrust
     | **Selected IP addresses** | Restricts access to specified public IP addresses.                         | Scenarios where you know the IP addresses of the clients that need to connect. |
     | **Disabled**            | Disables public network access entirely.                                    | Resources that should only be accessed from within a virtual network or through private endpoints. |
 
-> [!NOTE]  
-> About the exception checkmark `Allow Azure services on the trusted services list to access this search service`: <br/>
-> This setting `allows trusted Azure services to bypass the network rules` and access your resource directly.
-> These include services `like Azure Backup, Azure Site Recovery`, and others that are part of the trusted services list.
-> Even with this setting enabled, `proper authentication is still required` to access the resource, such as Managed Identity or Service Principal.
-> `Only resources within the specified IP address ranges or virtual networks will have access`.
-> Resources from other tenants or subscriptions will not have access `unless they are explicitly granted access through the whitelist or fall under the allowed exceptions`.
-> This setting is particularly useful for scenarios where you want to allow Azure Site Recovery to access your search service for disaster recovery purposes without needing to configure additional network rules.
+!!! note
+    About the exception checkmark `Allow Azure services on the trusted services list to access this search service`: <br/>
+    This setting `allows trusted Azure services to bypass the network rules` and access your resource directly.
+    These include services `like Azure Backup, Azure Site Recovery`, and others that are part of the trusted services list.
+    Even with this setting enabled, `proper authentication is still required` to access the resource, such as Managed Identity or Service Principal.
+    `Only resources within the specified IP address ranges or virtual networks will have access`.
+    Resources from other tenants or subscriptions will not have access `unless they are explicitly granted access through the whitelist or fall under the allowed exceptions`.
+    This setting is particularly useful for scenarios where you want to allow Azure Site Recovery to access your search service for disaster recovery purposes without needing to configure additional network rules.
+
 
 ### Integrate with Virtual Network (VNet)
 

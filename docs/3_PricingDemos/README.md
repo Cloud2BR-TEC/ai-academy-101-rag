@@ -1,11 +1,12 @@
-# Pricing Examples - Demonstration Purposes Only
+﻿# Pricing Examples - Demonstration Purposes Only
 
 ----------
 
 > Provides estimated reference costs for a Retrieval-Augmented Generation (RAG) solution over one month, broken down by components.
 
-> [!NOTE]
-> Use these values in the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) as a reference. While prices may be adjusted, this guide serves as a foundational resource for the procedure to be followed. Keep in mind that `costs will depend on the specific architecture you choose and your unique requirements`. This breakdown provides an overview of key components `you may require all, some, or even additional elements based on your use case.`
+!!! note
+    Use these values in the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) as a reference. While prices may be adjusted, this guide serves as a foundational resource for the procedure to be followed. Keep in mind that `costs will depend on the specific architecture you choose and your unique requirements`. This breakdown provides an overview of key components `you may require all, some, or even additional elements based on your use case.`
+
 
 <details>
 <summary><b>List of References </b> (Click to expand)</summary>
@@ -48,8 +49,8 @@ Please click here [Demonstration: Azure AI Search Pricing](./1_AI-Search.md) to 
 
 ## Azure Open AI or AI Foundry
 
-> **Azure Open AI** is a cloud-based generative AI service `that exclusively provides OpenAI models` (e.g., GPT‑3.5 and GPT‑4) for natural language processing, text generation, and semantic understanding.  <br/>
-> **Azure AI Foundry** `supports every type of AI model, allowing developers to deploy and manage a wide range of models` (from OpenAI’s to other machine learning architectures) for diverse intelligent applications.
+> **Azure Open AI** is a cloud-based generative AI service `that exclusively provides OpenAI models` (e.g., GPTâ€‘3.5 and GPTâ€‘4) for natural language processing, text generation, and semantic understanding.  <br/>
+> **Azure AI Foundry** `supports every type of AI model, allowing developers to deploy and manage a wide range of models` (from OpenAIâ€™s to other machine learning architectures) for diverse intelligent applications.
 
 Please click here [Demonstration: Azure Open AI & AI Foundry Pricing](./2_AOAI-AIFoundry.md) to get more information. 
 
@@ -98,16 +99,16 @@ Please click here [Demonstration: Azure Open AI & AI Foundry Pricing](./2_AOAI-A
 
 ## AI Services 
 
-1. **Azure AI Prompt Flow**: A low-code tool in Azure AI Studio that helps you design, evaluate, and optimize prompt engineering workflows. It’s useful for orchestrating RAG pipelines, chaining together retrieval, grounding, and generation steps.
-2. **Azure Cognitive Services – Language**: Offers capabilities like **entity recognition**, **key phrase extraction**, and **text summarization**, which can be used to preprocess or enrich documents before feeding them into a RAG pipeline.
-3. **Azure Cognitive Services – Translator**: Enables multilingual RAG solutions by translating user queries or retrieved documents into the desired language before passing them to the LLM.
+1. **Azure AI Prompt Flow**: A low-code tool in Azure AI Studio that helps you design, evaluate, and optimize prompt engineering workflows. Itâ€™s useful for orchestrating RAG pipelines, chaining together retrieval, grounding, and generation steps.
+2. **Azure Cognitive Services â€“ Language**: Offers capabilities like **entity recognition**, **key phrase extraction**, and **text summarization**, which can be used to preprocess or enrich documents before feeding them into a RAG pipeline.
+3. **Azure Cognitive Services â€“ Translator**: Enables multilingual RAG solutions by translating user queries or retrieved documents into the desired language before passing them to the LLM.
 4. **Azure AI Content Safety**: Helps detect and filter harmful or inappropriate content in both retrieved documents and generated responses, ensuring responsible AI use in RAG applications.
 5. **Azure AI Custom Neural Voice & Speech Services** *(for voice-based RAG)*: Useful if your RAG solution includes voice input/output, enabling transcription, synthesis, and voice interaction.
 6. **Azure Machine Learning**: Can be used to train or fine-tune custom models, manage vector embeddings, or evaluate RAG performance using custom metrics and pipelines.
 
 ## Front Door 
 
-> **Azure Front Door** is a `cloud-native global application delivery network` and a `Platform-as-a-Service (PaaS)` offering from Microsoft that provides `high-performance, secure, and scalable entry points` for your web applications and APIs. **Support SaaS applications and APIs** by acting as a secure, intelligent gateway that improves **performance**, **availability**, and **protection** for cloud-based services—including those used in **RAG (Retrieval-Augmented Generation)** solutions. It offers features like: <br/>
+> **Azure Front Door** is a `cloud-native global application delivery network` and a `Platform-as-a-Service (PaaS)` offering from Microsoft that provides `high-performance, secure, and scalable entry points` for your web applications and APIs. **Support SaaS applications and APIs** by acting as a secure, intelligent gateway that improves **performance**, **availability**, and **protection** for cloud-based servicesâ€”including those used in **RAG (Retrieval-Augmented Generation)** solutions. It offers features like: <br/>
 >
 > - Global HTTP/HTTPS load balancing <br/>
 > - SSL offloading <br/>
@@ -125,8 +126,9 @@ graph TD
     B --> |Response| A
 ```
 
-> [!IMPORTANT]
-> The information provided and any document (such as scripts, sample codes, etc.) is provided `AS-IS` and `WITH ALL FAULTS`. Pricing estimates are for `demonstration purposes only and do not reflect final pricing`. `Microsoft assumes no liability` for your use of this information and makes no guarantees or warranties, expressed or implied, regarding its accuracy or completeness, including any pricing details. `Please note that these demos are intended as a guide and are based on my personal experiences. For official guidance, support, or more detailed information, please refer to Microsoft's official documentation or contact Microsoft directly`: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+!!! info
+    The information provided and any document (such as scripts, sample codes, etc.) is provided `AS-IS` and `WITH ALL FAULTS`. Pricing estimates are for `demonstration purposes only and do not reflect final pricing`. `Microsoft assumes no liability` for your use of this information and makes no guarantees or warranties, expressed or implied, regarding its accuracy or completeness, including any pricing details. `Please note that these demos are intended as a guide and are based on my personal experiences. For official guidance, support, or more detailed information, please refer to Microsoft's official documentation or contact Microsoft directly`: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+
 
 <!-- START BADGE -->
 <div align="center">

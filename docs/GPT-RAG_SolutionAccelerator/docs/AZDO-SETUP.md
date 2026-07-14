@@ -1,9 +1,10 @@
-# Multi-Environment Azure DevOps Setup
+﻿# Multi-Environment Azure DevOps Setup
 
 This document outlines the steps to set up a multi-environment workflow to deploy infrastructure and services to Azure using Azure Pipelines, taking the solution from proof of concept to production-ready.
 
-> [!NOTE]
-> Note that additional steps may be required when working with the Zero Trust Architecture Deployment to handle deploying to a network-isolated environment. This guide is currently focused on deploying the Basic Architecture Deployment.
+!!! note
+    Note that additional steps may be required when working with the Zero Trust Architecture Deployment to handle deploying to a network-isolated environment. This guide is currently focused on deploying the Basic Architecture Deployment.
+
 
 # Assumptions:
 
@@ -36,9 +37,10 @@ This document outlines the steps to set up a multi-environment workflow to deplo
 
 # Steps:
 
-> [!NOTE]
-> 1. All commands below are to be run in a Bash shell.
-> 2. This guide aims to provide automated/programmatic steps for pipeline setup where possible. Manual setup is also possible, but not covered extensively in this guide. Please read more about manual pipeline setup [here](https://github.com/Azure/azure-dev/blob/main/cli/azd/docs/manual-pipeline-config.md).
+!!! note
+    1. All commands below are to be run in a Bash shell.
+    2. This guide aims to provide automated/programmatic steps for pipeline setup where possible. Manual setup is also possible, but not covered extensively in this guide. Please read more about manual pipeline setup [here](https://github.com/Azure/azure-dev/blob/main/cli/azd/docs/manual-pipeline-config.md).
+
 
 ## 1. Create `azd` environments & Service Principals
 
@@ -74,8 +76,9 @@ Then, get a personal access token (PAT) from Azure DevOps and set the AZURE_DEVO
 export AZURE_DEVOPS_EXT_PAT=<your-pat>
 ```
 
-> [!CAUTION]
-> Do _not_ check your PAT into source control.
+!!! warning
+    Do _not_ check your PAT into source control.
+
 
 Then, get the GUID of your Azure DevOps organization. This will be used when setting the [issuer field for the federated credential](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/configure-workload-identity?view=azure-devops#create-a-managed-identity) in a later step. In this example, we will retrieve the GUID through the browser, but you may also develop a more sophisticated method to retrieve the GUID using the [Azure DevOps Accounts REST API](https://learn.microsoft.com/en-us/rest/api/azure/devops/account/accounts/list?view=azure-devops-rest-7.1&tabs=HTTP) (The Accounts API requires an [OAuth 2 token](https://learn.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/oauth?view=azure-devops) for authorization, setup of which is not covered in this guide).
 
@@ -113,8 +116,9 @@ Next, you will create the environments, service principals, and pipelines, follo
 
 When running `azd pipeline config` for each environment, enter your organization name, and choose your target Azure subscription and location. When prompted to commit and push your local changes to start the configured CI pipeline, enter 'N'.
 
-> [!CAUTION]
-> If you choose 'Y' to commit and push your local changes, the pipeline will be triggered, and you may not have the necessary environments or variables set up yet, causing the pipeline to fail. The remaining setup steps must be completed before the pipeline will run successfully.
+!!! warning
+    If you choose 'Y' to commit and push your local changes, the pipeline will be triggered, and you may not have the necessary environments or variables set up yet, causing the pipeline to fail. The remaining setup steps must be completed before the pipeline will run successfully.
+
 
 ##### Dev
 
@@ -269,22 +273,25 @@ az devops service-endpoint create --service-endpoint-configuration ./service_con
 rm service_connection.json
 ```
 
-> [!TIP]
-> Verify that the variables in the above steps are set by printing them out with the `echo` command.
+!!! tip
+    Verify that the variables in the above steps are set by printing them out with the `echo` command.
 
-> [!NOTE]
-> The **"Post setup step #2"** actions above define several variables, populating them in a template JSON structure, found at `.azdo/pipelines/service-endpoint-config-template.json`. Read more about this approach [here](https://learn.microsoft.com/en-us/azure/devops/cli/service-endpoint?view=azure-devops#create-service-endpoint-using-configuration-file).
 
-> [!NOTE]
-> _Alternative approach to get the client IDs in the above steps:_
-> In the event that there are multiple Service Principals containing the same name, the `az ad sp list` command executed above may not pull the correct ID. You may execute an alternate command to manually review the list of Service Principals by name and ID. The command to do this is exemplified below for the dev environment.
->
-> ```bash
-> az ad sp list --display-name $dev_principal_name --query "[].{DisplayName:displayName, AppId:appId}" --output table # return results in a table format
-> dev_client_id='<guid>' # manually assign the correct client ID
-> ```
->
-> Also note you may get the client IDs from the Azure Portal.
+!!! note
+    The **"Post setup step #2"** actions above define several variables, populating them in a template JSON structure, found at `.azdo/pipelines/service-endpoint-config-template.json`. Read more about this approach [here](https://learn.microsoft.com/en-us/azure/devops/cli/service-endpoint?view=azure-devops#create-service-endpoint-using-configuration-file).
+
+
+!!! note
+    _Alternative approach to get the client IDs in the above steps:_
+    In the event that there are multiple Service Principals containing the same name, the `az ad sp list` command executed above may not pull the correct ID. You may execute an alternate command to manually review the list of Service Principals by name and ID. The command to do this is exemplified below for the dev environment.
+    
+    ```bash
+    az ad sp list --display-name $dev_principal_name --query "[].{DisplayName:displayName, AppId:appId}" --output table # return results in a table format
+    dev_client_id='<guid>' # manually assign the correct client ID
+    ```
+    
+    Also note you may get the client IDs from the Azure Portal.
+
 
 
 After performing the above steps, you will see corresponding files to your azd environments in the `.azure` folder.
@@ -316,8 +323,9 @@ az devops invoke --area distributedtask --resource environments --route-paramete
 rm azdoenv.json # clean up temp file
 ```
 
-> [!TIP]
-> After environments are created, set up deployment protection rules for each environment. See [this article](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass) for more. While approvers are not always necessary on the development environment, they are crucial for all other environments.
+!!! tip
+    After environments are created, set up deployment protection rules for each environment. See [this article](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass) for more. While approvers are not always necessary on the development environment, they are crucial for all other environments.
+
 
 ### Variable setup
 
@@ -333,9 +341,10 @@ az pipelines variable delete --name 'AZURE_ENV_NAME' --pipeline-id <pipeline-id>
 
 ## 3. Modify the workflow files as needed for deployment
 
-> [!IMPORTANT]
-> - The environment names are defined as variables within the below described `azure-dev.yml` file, **which need to be edited to match the environment names you created.** In this example, the environment name is also used as the service connection name. If you used different names for the environment name and service connection name, you will **also need to update the service connection parameter passed in each stage**.
-> - The `trigger` in the `azure-dev.yml` file is set to `none` to prevent the pipeline from running automatically. You can change this to `main` or `master` to trigger the pipeline on a push to the main branch.
+!!! info
+    - The environment names are defined as variables within the below described `azure-dev.yml` file, **which need to be edited to match the environment names you created.** In this example, the environment name is also used as the service connection name. If you used different names for the environment name and service connection name, you will **also need to update the service connection parameter passed in each stage**.
+    - The `trigger` in the `azure-dev.yml` file is set to `none` to prevent the pipeline from running automatically. You can change this to `main` or `master` to trigger the pipeline on a push to the main branch.
+
 
 - The following files in the `.azdo/pipelines` folder are used to deploy the infrastructure and services to Azure:
   - `azure-dev.yml`
