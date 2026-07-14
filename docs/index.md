@@ -1,7 +1,5 @@
 ﻿# Retrieval-Augmented Generation (RAG) Fundamentals
 
-> Retrieval-Augmented Generation (RAG)
-
 ----------
 
 <details markdown="block">
