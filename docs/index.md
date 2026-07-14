@@ -1,7 +1,5 @@
 ﻿# Retrieval-Augmented Generation (RAG) Fundamentals
 
-> Retrieval-Augmented Generation (RAG)
-
 ----------
 
 <details markdown="block">
@@ -356,20 +354,12 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 </details>
 
-<img src="https://github.com/user-attachments/assets/2a9d7c6b-1260-4ad1-8889-ce01057d2b44" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 </details>
 
 ### Step 0.2: Install PowerShell 7
 
 > PowerShell 7 `complements Azure Developer CLI (azd) by providing robust automation capabilities that enhance the development and deployment workflows on Azure`. With PowerShell 7, you can `automate tasks such as provisioning resources, deploying applications, and managing configurations, which are integral to azd's operations.` For instance, you can use PowerShell scripts to automate the azd provision command, ensuring consistent infrastructure setup across different environments. PowerShell 7's ability to execute commands remotely aligns with azd's remote environment support, allowing seamless management of Azure resources from any location. By integrating PowerShell 7 scripts into azd workflows, developers can streamline their processes, improve efficiency, and maintain greater control over their Azure deployments.
-
-<details markdown="block">
-<summary><b> Visual reference here </b> (Click to expand)</summary>
-
-<img src="https://github.com/user-attachments/assets/9bb475e4-7fef-46d9-9147-a28e806b4e1c" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
-
-</details>
 
 ### Step 1: Download the repository
 
@@ -388,7 +378,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
   azd init -t azure/gpt-rag -b agentic
   ```
 
-<img src="https://github.com/user-attachments/assets/22d2c66b-fd1e-4967-9f6c-ae02e27b2036" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 </details>
 
@@ -407,7 +396,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
   azd env set AZURE_NETWORK_ISOLATION true  
   ```
 
-<img src="https://github.com/user-attachments/assets/4f493506-970d-4b1d-aee2-1b0972a365d7" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 </details>
 
@@ -430,7 +418,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
       az login
       ```
 
-<img src="https://github.com/user-attachments/assets/ed8833ee-5edc-4d28-8b45-2d6ae75e2bf6" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 </details>
 
@@ -445,7 +432,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
   azd provision
   ```
 
-<img src="https://github.com/user-attachments/assets/015d2e96-978f-4606-beac-e25f03253585" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 > Once it is finished, you will see something like this:
 
@@ -472,9 +458,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 2. Log into the VM using the username and authenticate with the `password stored in the keyvault`, as illustrated in the figure below.
 
-<img src="https://github.com/user-attachments/assets/6b927de3-d54d-43b0-8fb1-7c0998827714" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
-<img src="https://github.com/user-attachments/assets/25ec1fb6-d999-41e4-ac17-0c16b14a946d" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 </details>
 
@@ -485,7 +469,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 > After logging into Windows, [install PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package), as all other necessary components are already set up on the VM.
 
-<img src="https://github.com/user-attachments/assets/c089a26e-8b31-466b-a052-a05d73d488fb" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 </details>
 
@@ -500,7 +483,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
   choco upgrade azd  
   ```
 
-<img src="https://github.com/user-attachments/assets/777cdd6e-fa8f-49c2-9398-f94ac45be711" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 </details>
 
@@ -519,7 +501,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
     <img src="https://github.com/user-attachments/assets/db726be0-49a7-4fe7-b042-b14aaa82983f" alt="Centered Image" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
   </div>
   
-<img src="https://github.com/user-attachments/assets/daf3df9d-8c77-42b8-9b84-6728ef4a3332" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 1. Create a new folder, for example `deploy` as mentioned in the [local guide](./GPT-RAG_SolutionAccelerator/README.md#zero-trust-architecture-deployment)
 2. Once you've created the folder, go ahead and jump into it.
@@ -529,23 +510,19 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
       cd deploy
       ```
 
-  <img src="https://github.com/user-attachments/assets/8ea84df0-ac9a-4cad-be91-bfb24548d1d1" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 > When executing the `azd init for the app` and `azd env refresh` commands, ensure that the `environment name, subscription, and region are consistent` with those used during the `initial infrastructure provisioning`.
 
 3. Sets up a new project using the Azure GPT-RAG template: `azd init -t azure/gpt-rag`
   
-  <img src="https://github.com/user-attachments/assets/094a0830-2a33-42ae-821c-b8ae199fd772" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 4. Logs you into Azure Developer CLI: `azd auth login`.
 
 > Ensure your admin account is correctly configured with Authenticator.
 
-<img src="https://github.com/user-attachments/assets/f34a13eb-b045-40c9-8f99-edc4dc9d0d15" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 5. Logs you into your Azure account: `az login`
 
-  <img src="https://github.com/user-attachments/assets/bfe9d038-4503-447e-b251-8da67bc0258a" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 6. Updates your environment settings with the latest configuration: `azd env refresh`
 
@@ -564,7 +541,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
         View environment variables at C:\Users\vm-user\Downloads\RAG-ChatBot-Implementation\GPT-RAG_SolutionAccelerator\deploy\.azure\gptbrowntest\.env
       ```
     
-    <img src="https://github.com/user-attachments/assets/4c3337e0-514c-4ad5-8324-e911d9542496" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 8. Builds and packages your application code into deployable artifacts without deploying them to Azure: `azd package`
 
@@ -576,7 +552,6 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 9. Deploys your project to Azure: `azd deploy`
 
-  <img src="https://github.com/user-attachments/assets/aa248d9b-b1eb-42e3-9e6c-5e41bfdf5484" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 > **If you find an error with `azd deploy`:** 
 
@@ -606,5 +581,6 @@ gpt-rag-resource-group: resource not found: 0 resource groups with prefix or suf
 
 
 <img width="411" height="243" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/40682ec2-77e4-4413-88e5-d343f036f084" />
+
 
 
