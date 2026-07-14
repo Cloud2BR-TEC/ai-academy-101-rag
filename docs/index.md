@@ -89,7 +89,8 @@ flowchart LR
 
 !!! tip
     Start simple (LLM + AI Search); add embeddings/vector search when keyword recall fails; add hybrid, reranker, and orchestration as scale, accuracy, and workflow complexity grow.
-    <details> <summary><b> Quick explanation about trends: </b> (Click to expand)</summary>
+  <details>
+  <summary><b>Quick explanation about trends:</b> (Click to expand)</summary>
     
     - LLM + AI Search is enough âž `When Knowledge Base is small and queries predictable`; use metadata/keyword filters to retrieve exact passages and pass them to the LLM for generation.
     - Add embeddings + [vector search](https://learn.microsoft.com/en-us/azure/search/vector-search-ranking) âž `When queries are openâ€‘ended or paraphrased`; embed query and docs, run ANN similarity to surface semantically relevant passages.
