@@ -55,6 +55,6 @@
 - **Use case**: Real-time news search with filters and AI enrichment  
 - **Suggested tier**: `Standard S2 or S3 with 3 replicas, 2 partitions`
 
-<img src="/ai-academy-101-rag/assets/img/steps/809199a9-8a3f-4540-b4fa-d6358e685c01.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
+<img src="../assets/img/steps/809199a9-8a3f-4540-b4fa-d6358e685c01.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 
