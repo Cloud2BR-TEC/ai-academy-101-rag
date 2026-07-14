@@ -26,7 +26,7 @@
 
    > Microsoft offers a free tier (F0) that allows users to test all its features. The free tier includes a `limited number of pages that can be scanned per request`. `As of now, the free allocation enables users to analyze up to two pages per request, and up to 500 pages included per month` If the total number of pages and features fall within the allowed usage, it can be used accordingly.
 
-<img src="../assets/img/steps/96081a96-61b9-47a3-9caf-0f77e389217e.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
+<img src="../../assets/img/steps/96081a96-61b9-47a3-9caf-0f77e389217e.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 > E.g.1 of estimation: 
 
@@ -47,6 +47,6 @@
    > - Add-on: Additional features of Form Recognizer that incur extra charges. E.g High Resolution, Font, and Formula. <br/>
    > - Query: Allows querying document content using natural language
 
-<img src="../assets/img/steps/50e6770d-4b83-4a0b-a639-7b1f26b29b4b.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
+<img src="../../assets/img/steps/50e6770d-4b83-4a0b-a639-7b1f26b29b4b.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 
