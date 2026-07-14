@@ -23,7 +23,7 @@ The **RAG pattern** enables businesses to use the reasoning capabilities of LLMs
 
 The **Enterprise RAG** Solution Accelerator (GPT-RAG) offers a robust architecture tailored for enterprise-grade deployment of the RAG pattern. It ensures grounded responses and is built on Zero-trust security and Responsible AI, ensuring availability, scalability, and auditability. Ideal for organizations transitioning from exploration and PoC stages to full-scale production and MVPs.
 
-âœ¨ See our [User & Admin Guide](docs/GUIDE.md) for complete setup and usage details.
+See our [User & Admin Guide](docs/GUIDE.md) for complete setup and usage details.
 
 ## Application Components
 
@@ -56,26 +56,26 @@ If you want to learn more about the RAG Pattern and GPT-RAG architecture.
 
 <!-- ## Administration Guide
 
-For detailed instructions on managing and configuring the system, please refer to the [Administration Guide](docs/ADMINISTRATION_GUIDE.md) ðŸ“–. -->
+For detailed instructions on managing and configuring the system, please refer to the [Administration Guide](docs/ADMINISTRATION_GUIDE.md). -->
 
 <!-- <a href="https://www.youtube.com/watch?v=ICsf4yirieA"><img src="https://img.youtube.com/vi/ICsf4yirieA/0.jpg" alt="Alt text" width="480"/></a> -->
 
 
 ## Setup Guide
 
-1) **Basic Architecture Deployment:** *for quick demos with no network isolation*âš™ï¸
+1) **Basic Architecture Deployment:** *for quick demos with no network isolation*
 
 Learn how to **quickly set up** the basic architecture for scenarios without network isolation. [Click the link to proceed](#basic-architecture-deployment).
 
-2) **Standard Zero-Trust Architecture Deployment:** *fastest Zero-Trust deployment option*âš¡
+2) **Standard Zero-Trust Architecture Deployment:** *fastest Zero-Trust deployment option*
 
 Deploy the solution accelerator using the standard zero-trust architecture with pre-configured solution settings. No customization needed. [Click the link to proceed](#zero-trust-architecture-deployment).
 
-3) **Custom Zero-Trust Architecture Setup:** *most used* â­
+3) **Custom Zero-Trust Architecture Setup:** *most used*
 
 Explore options for customizing the deployment of the solution accelerator with a zero-trust architecture, adjusting solution settings to your needs. [Click the link to proceed](docs/AUTOMATED_INSTALLATION.md).
 
-4) **Step-by-Step Manual Setup: Zero-Trust Architecture:** *hands-on approach* ðŸ› ï¸**
+4) **Step-by-Step Manual Setup: Zero-Trust Architecture:** *hands-on approach*
 
 For those who prefer complete control, follow this detailed guide to manually set up the solution accelerator with a zero-trust architecture. [Click the link to proceed](docs/MANUAL_INSTALLATION.md).
 

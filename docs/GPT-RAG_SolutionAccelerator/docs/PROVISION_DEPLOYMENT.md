@@ -109,7 +109,7 @@ Each stage involves specific hooks and tasks to create or update resources and s
 ### 1. Provision Stage
 
 **Command:** `azd provision`  
-**Purpose:** Sets up the necessary Azure infrastructure as defined in the projectâ€™s resource templates.
+**Purpose:** Sets up the necessary Azure infrastructure as defined in the project's resource templates.
 
 **Process:**
 

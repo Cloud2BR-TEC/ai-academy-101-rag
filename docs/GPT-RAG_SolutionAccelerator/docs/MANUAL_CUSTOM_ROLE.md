@@ -1,6 +1,6 @@
 ﻿# Creating a Custom Role for GPT-RAG Installation
 
-This guide outlines how to create a custom role in Azure to support least privilege access, ensuring that users and applications have only the permissions needed for specific tasks. By using a custom role, you can enhance security and reduce risk. Permissions in this guide are organized by type: read, action, write, and delete, making it simple to customizeâ€”such as removing delete permissions if not needed.
+This guide outlines how to create a custom role in Azure to support least privilege access, ensuring that users and applications have only the permissions needed for specific tasks. By using a custom role, you can enhance security and reduce risk. Permissions in this guide are organized by type: read, action, write, and delete, making it simple to customize-such as removing delete permissions if not needed.
 
 !!! tip
     This procedure applies when you prefer creating a custom role with more specific permissions instead of assigning the **Owner** or **Contributor + User Access Administrator** role.
@@ -214,7 +214,7 @@ This guide outlines how to create a custom role in Azure to support least privil
    ![Role Assignment](../media/custom-role-allow.png)
 
    - On the **Assignment type** tab, select the **Assignment type**:
-     - **Eligible** â€“ Requires the user to perform one or more actions to activate the role, such as multifactor authentication, providing a business justification, or requesting approval. **Note:** Applications, service principals, and managed identities cannot perform activation steps.
+   - **Eligible** - Requires the user to perform one or more actions to activate the role, such as multifactor authentication, providing a business justification, or requesting approval. **Note:** Applications, service principals, and managed identities cannot perform activation steps.
    - For **Assignment duration**, select **Time bound** if needed, and specify start and end dates.
 
 8. **Finalize the Assignment**

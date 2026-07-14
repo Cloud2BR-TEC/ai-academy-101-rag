@@ -2,13 +2,13 @@
 
 Azd provisions the infrastructure and deploys the components. To meet specific needs, you can customize the code, such as updating the [bot description](https://github.com/Azure/gpt-rag-orchestrator/blob/main/orc/bot_description.prompt) in the orchestrator to better define the bot's scope.
 
-This accelerator repositories are public, here are some options for extending its code in your projects: 
+These accelerator repositories are public, and here are some options for extending their code in your projects: 
 
-- **Forking the GitHub repository**: Choose this option if you want to contribute to the original project or keep your version connected. If you fork into a private GitHub repository, you canâ€™t submit pull requests back unless you make your fork public or create a public branch.
+- **Forking the GitHub repository**: Choose this option if you want to contribute to the original project or keep your version connected. If you fork into a private GitHub repository, you can't submit pull requests back unless you make your fork public or create a public branch.
 
 ![Extending Forking](../media/extending-forking.png)
 
-- **Using as a GitHub Template**: Select this option if you want to copy repo code in a new, independent GitHUb repository. This lets you start fresh with a private repository, without linking it to the original.
+- **Using as a GitHub Template**: Select this option if you want to copy repo code in a new, independent GitHub repository. This lets you start fresh with a private repository, without linking it to the original.
 
 ![Extending as a Template](../media/extending-use-as-template.png)
 

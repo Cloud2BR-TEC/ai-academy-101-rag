@@ -57,7 +57,7 @@ The GPT-RAG Solution Accelerator follows a **modular approach**, consisting of t
 
 ### Protected Data Access with Zero Trust Design
 
-Adopting a **Zero Trust** approach in Azure, as implemented by the GPT-RAG Solution Accelerator, provides a strong **security foundation** to safeguard your organizationâ€™s data and resources. Instead of using public endpoints, which expose services to the internet and increase susceptibility to cyber threats, this architecture ensures all access occurs within a **secure, isolated network** environment, reducing the attack surface and mitigating the risk of unauthorized access.
+Adopting a **Zero Trust** approach in Azure, as implemented by the GPT-RAG Solution Accelerator, provides a strong **security foundation** to safeguard your organization's data and resources. Instead of using public endpoints, which expose services to the internet and increase susceptibility to cyber threats, this architecture ensures all access occurs within a **secure, isolated network** environment, reducing the attack surface and mitigating the risk of unauthorized access.
 
 GPT-RAG's **Zero Trust** architecture with **private endpoints** ensures **network isolation** for sensitive data, enabling efficient Azure service integration without public IP exposure. This approach mitigates risks like data breaches and unauthorized access, creating a controlled environment that strengthens **data integrity** and confidentiality.
 
@@ -65,7 +65,7 @@ GPT-RAG's **Zero Trust** architecture with **private endpoints** ensures **netwo
 
 The GPT-RAG Solution Accelerator's **agentic orchestration** allows organizations to design **tailored orchestration flows** that coordinate multiple specialized agents. This customization ensures that complex queries are handled with precision and efficiency, leading to more accurate and contextually relevant AI responses.
 
-Additionally, the solutionâ€™s **custom chunking strategy** tailors content segmentation to fit the unique characteristics of different data types and document structures. Aligning chunking methods to data specifics enhances retrieval speed, accuracy, and AI responsiveness, ensuring information is precise and contextually relevant.
+Additionally, the solution's **custom chunking strategy** tailors content segmentation to fit the unique characteristics of different data types and document structures. Aligning chunking methods to data specifics enhances retrieval speed, accuracy, and AI responsiveness, ensuring information is precise and contextually relevant.
 
 ## Concepts
 
@@ -131,7 +131,7 @@ For more information about the agentic orchestration take a look at the [GPT-RAG
 
 ## Network Components
 
-The networking architecture for the GPT-RAG solution leverages Azureâ€™s advanced features to ensure a secure, flexible, and isolated environment, adhering to Zero Trust principles through the use of private endpoints and stringent access controls.
+The networking architecture for the GPT-RAG solution leverages Azure's advanced features to ensure a secure, flexible, and isolated environment, adhering to Zero Trust principles through the use of private endpoints and stringent access controls.
 
 1. **Azure Virtual Network (VNet):** Provides a logically isolated network environment, segmented into subnets for different application tiers, ensuring organized and secure deployment of resources.
     
@@ -432,7 +432,7 @@ Select your preferred network setup:
 To optimize your setup, you can reuse non-networking resources already deployed within the same subscription, such as Azure OpenAI, Cosmos DB, and Key Vault. If you choose to reuse any of these resources, ensure you have their names and resource group details ready.
 
 !!! info
-    If youâ€™re reusing an existing Virtual Network (VNet), you must manually create all related network resources. This includes configuring subnets, private endpoints, and network interfaces as outlined in the **Manual Network Setup** scenario. In this case, the Bicep templates will not deploy network resources automatically when an existing VNet is reused.
+   If you're reusing an existing Virtual Network (VNet), you must manually create all related network resources. This includes configuring subnets, private endpoints, and network interfaces as outlined in the **Manual Network Setup** scenario. In this case, the Bicep templates will not deploy network resources automatically when an existing VNet is reused.
 
 
 #### Resource Naming and Tagging
@@ -558,7 +558,7 @@ This section is intended for those who have chosen to manually create their netw
 
 ![Zero Trust Architecture](../media/admin-guide-vnet.png)
 
-We recommend following this network topology to align with the Zero Trust architecture. However, you may use your organizationâ€™s VNet and subnet standards if preferred. For reference, the default addressing used in the Bicep template is shown below:
+We recommend following this network topology to align with the Zero Trust architecture. However, you may use your organization's VNet and subnet standards if preferred. For reference, the default addressing used in the Bicep template is shown below:
 
 | **Name**                 | **Address Range** |
 |--------------------------|-------------------|
@@ -669,7 +669,7 @@ azd deploy
    azd deploy
    ```
 
-ðŸŽ‰ **Congratulations! Your Zero Trust deployment is now complete.**
+**Congratulations! Your Zero Trust deployment is now complete.**
 
 !!! note
     If you want to upload documents for ingestion into the GPT-RAG storage account, you must have the **Storage Blob Data Contributor** role assigned in Azure Entra ID.
@@ -804,7 +804,7 @@ The following diagram illustrates a scenario using VNet Peering to allow interna
 ![Diagram illustrating VNet Peering](../media/admin-guide-vnet-peering-diagram.png)
 <br>*VNet Peering*
 
-To simplify, the diagram only includes the App Service frontendâ€™s Private Endpoint and DNS configuration **azurewebsites.net**. Uploading documents requires DNS setup for the Storage Account **blob.core.windows.net**, and reindexing the AI Search index needs DNS configuration for the search service domain **search.windows.net**.
+To simplify, the diagram only includes the App Service frontend's Private Endpoint and DNS configuration **azurewebsites.net**. Uploading documents requires DNS setup for the Storage Account **blob.core.windows.net**, and reindexing the AI Search index needs DNS configuration for the search service domain **search.windows.net**.
 
 #### Pre-requisites
 
@@ -881,7 +881,7 @@ To set up Front Door and WAF, follow the instructions in the [Create an Azure Fr
 With the **Private Endpoint** already set up for **App Service**, you can still configure an IP allowlist for specific cases, such as temporary access to the frontend for quick testing. This setup ensures that only trusted sources with pre-approved IPs can access the service publicly when necessary.
 
 !!! info
-    Use this approach for short-term access, such as quick testing or setup for a small group of users. Itâ€™s a simple control but relies on a public endpoint, so apply it only when necessary for specific cases.
+   Use this approach for short-term access, such as quick testing or setup for a small group of users. It's a simple control but relies on a public endpoint, so apply it only when necessary for specific cases.
 
 
 #### **Pre-requisites**
@@ -935,7 +935,7 @@ This section outlines the steps to configure a custom MSAL-based authentication 
    This path must match the environment variable `REDIRECT_PATH` configured in your code (defaults to `/getAToken`).  
 5. Click **Register**.  
 
-> **Note**: After registration, copy the **Application (client) ID**â€”you will set it in the environment as `CLIENT_ID`.
+> **Note**: After registration, copy the **Application (client) ID**-you will set it in the environment as `CLIENT_ID`.
 
 ### 2. Create and Store the Client Secret
 
@@ -961,13 +961,13 @@ Below are the key environment variables that must be set in your front-end App S
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | **ENABLE_AUTHENTICATION**           | Controls if MSAL-based authentication is enabled. Set to `"true"` or `"false"`.                                          | `"true"`                                                              |
 | **CLIENT_ID**                       | The Client ID (Application ID) of your Azure AD app registration.                                                         | `"00000000-0000-0000-0000-000000000000"`                             |
-| **APP_SERVICE_CLIENT_SECRET_NAME**  | Name of the secret in Key Vault that stores your app registrationâ€™s client secret.                                        | `"appServiceClientSecretKey"`                                        |
+| **APP_SERVICE_CLIENT_SECRET_NAME**  | Name of the secret in Key Vault that stores your app registration's client secret.                                        | `"appServiceClientSecretKey"`                                        |
 | **AUTHORITY**                       | The authority / tenant ID for Azure AD.                                                                                  | `"https://login.microsoftonline.com/your_tenant_id"`                 |
 | **REDIRECT_PATH**                   | The path the identity provider will redirect back to after sign-in.                                                      | `"/getAToken"`                                                        |
 | **OTHER_AUTH_SCOPES**               | A comma-separated list of additional API scopes (beyond "User.Read").                                                    | `"https://analysis.windows.net/powerbi/api/.default,SomeOther.Scope"` |
-| **FLASK_SECRET_KEY_NAME**           | Name of the secret in Key Vault that stores your Flask session key (only if youâ€™re using Flask-based sessions). | `"flaskSecretKey"` |  
-| **SESSION_SECRET_KEY**              | Name of the secret in Key Vault that stores your FastAPI session key (only if youâ€™re using a FastAPI-based front-end). | `"sessionSecretKey"` |  
-| **FORWARD_ACCESS_TOKEN_TO_ORCHESTRATOR** | A boolean indicating whether the user's access token should be included in the payload sent to the orchestrator. This is only required when the app registration must access APIs on behalf of the user (e.g., Power BI REST API, where permissions are delegated from the user rather than the app). When set to `"true"`, the payload sent to the orchestrator (`/chatgpt` endpoint) will include the following fields: <br> - **`client_principal_id`**: The userâ€™s Object ID in Azure AD. <br> - **`client_principal_name`**: The userâ€™s UPN or preferred username. <br> - **`access_token`**: The valid access token for additional APIs (included only if acquired). | `"true"` |
+| **FLASK_SECRET_KEY_NAME**           | Name of the secret in Key Vault that stores your Flask session key (only if you're using Flask-based sessions). | `"flaskSecretKey"` |  
+| **SESSION_SECRET_KEY**              | Name of the secret in Key Vault that stores your FastAPI session key (only if you're using a FastAPI-based front-end). | `"sessionSecretKey"` |  
+| **FORWARD_ACCESS_TOKEN_TO_ORCHESTRATOR** | A boolean indicating whether the user's access token should be included in the payload sent to the orchestrator. This is only required when the app registration must access APIs on behalf of the user (e.g., Power BI REST API, where permissions are delegated from the user rather than the app). When set to `"true"`, the payload sent to the orchestrator (`/chatgpt` endpoint) will include the following fields: <br> - **`client_principal_id`**: The user's Object ID in Azure AD. <br> - **`client_principal_name`**: The user's UPN or preferred username. <br> - **`access_token`**: The valid access token for additional APIs (included only if acquired). | `"true"` |
 
 
 > **Important**: If you plan to use the Power BI REST API, you must include the following scope in `OTHER_AUTH_SCOPES`:
@@ -981,14 +981,14 @@ Below are the key environment variables that must be set in your front-end App S
 In the Azure AD app registration:
 - Go to **Authentication**.  
 - Under **Redirect URIs**, ensure the URI you used in step 1.4 is listed (e.g., `https://<your-frontend-app-url>/getAToken`).  
-- If needed, add additional reply URLs that match your deploymentâ€™s domain(s).  
+- If needed, add additional reply URLs that match your deployment's domain(s).  
 
 ### 5. Validation and Testing
 
 1. **Enable authentication** in your front-end app by setting `ENABLE_AUTHENTICATION = "true"`.  
 2. Navigate to your front-end URL.  
    - If you are not signed in, you will be redirected to the Microsoft login page.  
-   - After successful sign-in, you will be redirected back to your applicationâ€™s `REDIRECT_PATH` (e.g., `/getAToken`).  
+   - After successful sign-in, you will be redirected back to your application's `REDIRECT_PATH` (e.g., `/getAToken`).  
 3. If you have included extra scopes in `OTHER_AUTH_SCOPES` (e.g., Power BI), the code attempts to silently acquire tokens for those scopes as well.  
 4. Confirm that the necessary tokens are being retrieved by observing the logs or the session state.
 
@@ -1036,7 +1036,7 @@ Control user access within front-end application using **user principal IDs**, *
 
 3. **Set Environment Variables**
 
-   In your application's settings, populate the environment variables needed to define which users or groups can access the application. You donâ€™t need to create all threeâ€”just the ones relevant to your authorization setup:
+   In your application's settings, populate the environment variables needed to define which users or groups can access the application. You don't need to create all three-just the ones relevant to your authorization setup:
 
    - Use `AUTHORIZED_USER_PRINCIPALS` if you want to specify user principal IDs (e.g., `user-principal-id-1`).
    - Use `AUTHORIZED_USER_NAMES` if you want to specify usernames (e.g., `user1@example.com,user2@example.com`).
@@ -1087,7 +1087,7 @@ The Speech Avatar leverages Azure Speech Services, Azure Key Vault, and Azure Ap
 
 ## Search Trimming
 
-This customization is particularly valuable in scenarios where sensitive documents need to be accessed by specific groups or individuals within an organization. With this feature you can ensure that AI Search returns results tailored to each userâ€™s access (no RBAC permissions), please take a look at the [Filter Files with AI Search Using Security Trimming](CUSTOMIZATIONS_SEARCH_TRIMMING.md) page.
+This customization is particularly valuable in scenarios where sensitive documents need to be accessed by specific groups or individuals within an organization. With this feature you can ensure that AI Search returns results tailored to each user's access (no RBAC permissions), please take a look at the [Filter Files with AI Search Using Security Trimming](CUSTOMIZATIONS_SEARCH_TRIMMING.md) page.
 
 ## Bring Your Own Resources
 
@@ -1108,7 +1108,7 @@ The Solution Accelerator is structured across four primary Git repositories:
 
 ### Option 1: Using Repositories as Templates (Most Common)
 
-If you'd like to use the repositories as a starting point without making updates to the original, you can use GitHub's template feature. This will create an independent copy of the repository, which you can fully customize. However, keep in mind that this option wonâ€™t automatically sync with future updates from the original repository.
+If you'd like to use the repositories as a starting point without making updates to the original, you can use GitHub's template feature. This will create an independent copy of the repository, which you can fully customize. However, keep in mind that this option won't automatically sync with future updates from the original repository.
 
 !!! note
     The following steps should be performed for each of the four Solution Accelerator repositories: **gpt-rag**, **gpt-rag-ingestion**, **gpt-rag-agentic**, and **gpt-rag-frontend**.

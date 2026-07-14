@@ -43,11 +43,11 @@ In these scenarios, the **orchestrator** interprets the user's query, identifies
 
 To implement these scenarios, the solution relies on two key components of GPT-RAG:
 
-1. **Orchestrator** â€“ Generates and executes queries, retrieves results, and formulates the final response for the user.
+1. **Orchestrator** - Generates and executes queries, retrieves results, and formulates the final response for the user.
 
 Learn how the **orchestrator** works and configure it for NL2SQL and Fabric in the [Orchestrator Repository](https://github.com/Azure/gpt-rag-agentic/blob/main/docs/NL2SQL.md).
 
-2. **Data Ingestion** â€“ Ingests data source metadata, like data dictionaries, to enhance query generation accuracy.
+2. **Data Ingestion** - Ingests data source metadata, like data dictionaries, to enhance query generation accuracy.
 
 To configure the **data ingestion** process for these scenarios, refer to the [Data Ingestion Repository](https://github.com/Azure/gpt-rag-ingestion/blob/main/docs/NL2SQL.md).
 
@@ -80,7 +80,7 @@ The orchestrator supports different authentication methods depending on the data
 
 When connecting to **Azure SQL Databases**, you have two authentication options:
 
-- **Managed Identity (Preferred):** Uses the system-assigned or user-assigned identity of the Orchestrator Azure Function. The prerequisite is to ensure that the orchestratorâ€™s managed identity has the `db_datareader` role on the target database.
+- **Managed Identity (Preferred):** Uses the system-assigned or user-assigned identity of the Orchestrator Azure Function. The prerequisite is to ensure that the orchestrator's managed identity has the `db_datareader` role on the target database.
 
 - **SQL Server Authentication:** Requires a `uid` and password for a user with read access to the database. The password must be stored in **Azure Key Vault**, following the naming convention `{datasource_id}-secret`. Configuration details are provided in the next section.
 

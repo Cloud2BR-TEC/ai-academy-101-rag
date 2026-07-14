@@ -142,7 +142,7 @@ If you are reusing a Key Vault, the identity used to execute the AZD commands, w
 
 ### Virtual Network (VNet)
 
-If you prefer to use an existing VNet, that's perfectly fine. In this case, youâ€™ll need to set up your network resourcesâ€”such as the VNet, subnets, and private endpointsâ€”manually and indicate this by setting the `VNET_REUSE` variable. 
+If you prefer to use an existing VNet, that's perfectly fine. In this case, you'll need to set up your network resources-such as the VNet, subnets, and private endpoints-manually and indicate this by setting the `VNET_REUSE` variable. 
 
 Below is a typical workflow: first, provision non-network resources, such as the Function App and CosmosDB; then, create and configure the network resources; and finally, deploy the application components (orchestrator, frontend, and data ingestion).
 
@@ -183,7 +183,7 @@ Below is a typical workflow: first, provision non-network resources, such as the
 
 #### Bastion and Data Science VM:
 
-If users have secure access to the VNet through ExpressRoute or VPN, they can perform the required tasks directly from their own machines. This eliminates the need for a Bastion VM, making its creation optional. This way, you wonâ€™t need to create a Bastion subnet or provision a Data Science VM.
+If users have secure access to the VNet through ExpressRoute or VPN, they can perform the required tasks directly from their own machines. This eliminates the need for a Bastion VM, making its creation optional. This way, you won't need to create a Bastion subnet or provision a Data Science VM.
 
 To skip provisioning the Data Science VM when running `azd provision`, remember to set the following variable to false:
 

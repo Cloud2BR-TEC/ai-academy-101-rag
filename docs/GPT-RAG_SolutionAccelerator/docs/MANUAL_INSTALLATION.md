@@ -403,7 +403,7 @@ Gather Necessary Information:
 
 13. **Application Deployment**
 
-    - Once resources are provisioned and settings configured, youâ€™re ready to deploy each application.
+    - Once resources are provisioned and settings configured, you're ready to deploy each application.
     - First clone the repositories for each application.
     - For the Orchestrator Function App and Data Ingestion Function App:
       - In VSCode with the [Azure Function App Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions), go to the *Azure* panel, locate your Function App in the resource explorer, right-click on it, and select *Deploy*.
