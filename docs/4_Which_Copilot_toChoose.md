@@ -59,7 +59,10 @@
     `When users don't want/need to create their own interface or customized view`, they can `leverage the AI integrated into our products and services, depending on their needs.` For example, if they require visualizations capabilities with AI assistance, they can use the AI already built into `Fabric/Power Bi to generate reports, ask questions, etc.` Click here to read more about it [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) 
 
 
-Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
+Preview or download the diagram:
+
+<a class="md-button md-button--primary" href="../docs/ai-chat-decision-flow.png" target="_blank" rel="noopener">Preview Diagram</a>
+<a class="md-button" href="../docs/ai-chat-decision-flow.drawio" download>Download Diagram (.drawio)</a>
 
 <details markdown="block">
 <summary><b>More details</b> (Click to expand)</summary>
