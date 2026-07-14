@@ -1,0 +1,68 @@
+site_name: "Retrieval-Augmented Generation (RAG) Fundamentals"
+site_description: Hands-on guidance for RAG architecture, security patterns, pricing, and operations on Azure.
+site_url: https://cloud2br-tec.github.io/ai-academy-101-rag/
+docs_dir: docs
+
+copyright: Copyright &copy; 2026 <a href="https://github.com/Cloud2BR-TEC" target="_blank" rel="noopener">Cloud2BR TEC</a>
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+
+extra:
+  generator: false
+
+nav:
+  - Home: index.md
+  - 01. RAG Pattern Overview: 0_RAG_Overview.md
+  - 02. Private Architecture Demo: 1_PrivateArchitecture.md
+  - 03. Zero Trust Architecture: 2_ZeroTrustOverview.md
+  - 04. Pricing Demos:
+      - Overview: 3_PricingDemos/README.md
+      - Document Intelligence Pricing: 3_PricingDemos/0_Doc-Intellig.md
+      - AI Search Pricing: 3_PricingDemos/1_AI-Search.md
+      - Azure OpenAI and AI Foundry Pricing: 3_PricingDemos/2_AOAI-AIFoundry.md
+  - 05. Copilot Decision Guide: 4_Which_Copilot_toChoose.md
+  - 06. Initial AI Questions: 5_AI_Initial_Questions.md
+  - 07. Quick Operations:
+      - How to Modify: how-modify.md
+      - How to Redeploy: how-redeploy-app.md
+      - Troubleshooting: troubleshooting.md
+  - 08. Infrastructure with Terraform: terraform-infrastructure/README.md
