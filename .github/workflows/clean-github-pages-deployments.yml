@@ -5,6 +5,8 @@ on:
     workflows: ["Deploy GitHub Pages"]
     types:
       - completed
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -12,6 +14,7 @@ permissions:
 
 jobs:
   clean-deployments:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Keep only the latest 2 GitHub Pages deployments
