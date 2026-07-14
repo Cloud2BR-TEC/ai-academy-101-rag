@@ -776,7 +776,7 @@ Follow these steps to securely connect to the Data Science VM through Azure Bast
    
    - In the Azure Bastion overview page, log into the created VM with the user **gptrag** and authenticate with the password stored in the key vault, similar to the figure below:  
 
-   <img src="../../media/readme-keyvault-login.png" alt="Bastion Connection Screen" width="1024">
+   <img src="../media/readme-keyvault-login.png" alt="Bastion Connection Screen" width="1024">
    <br>*Bastion Connection Interface*
 
 !!! note

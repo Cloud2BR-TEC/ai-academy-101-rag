@@ -318,7 +318,7 @@ azd provision
 Log into the created VM with the user **gptrag** and authenticate with the password stored in the key vault, similar to the figure below:  
 
 <BR>   
-<img src="../../media/readme-keyvault-login.png" alt="Keyvault Login" width="1024">
+<img src="../media/readme-keyvault-login.png" alt="Keyvault Login" width="1024">
    
 **6**  Upon accessing Windows, install [Powershell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package), as the other prerequisites are already installed on the VM.  
    
