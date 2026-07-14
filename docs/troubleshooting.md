@@ -2,13 +2,6 @@
 
 ------------------------------------------
 
-<details>
-<summary><b>Table of Content </b> (Click to expand)</summary>
-
-- [Service Quota Exceeded](#service-quota-exceeded)
-
-</details>
-
 ## Service Quota Exceeded
 
 > The  deployment request is attempting to provision a service at a tier (in this case, standard2) that exceeds the allowed quota. The error suggests that we sre using 0 out of 0 quota, meaning you have no available quota for this tier. The recommended fix is to submit a quota increase request using the guidelines provided in the error message:

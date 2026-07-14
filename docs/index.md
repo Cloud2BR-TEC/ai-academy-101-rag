@@ -34,26 +34,6 @@
 
 </details>
 
-<details>
-<summary><b>Table of Content</b> (Click to expand)</summary>
-
-- [Where to start?](#where-to-start)
-- [Basic Architecture](#basic-architecture)
-  - [Important Considerations for Production Environment](#important-considerations-for-production-environment)
-- [Zero Trust Architecture](#zero-trust-architecture)
-  - [Step 0.1: Install azd](#step-01-install-azd)
-  - [Step 0.2: Install PowerShell 7](#step-02-install-powershell-7)
-  - [Step 1: Download the repository](#step-1-download-the-repository)
-  - [Step 2: Enable network isolation](#step-2-enable-network-isolation)
-  - [Step 3: Login to Azure](#step-3-login-to-azure)
-  - [Step 4: Deploy the insfrastructure](#step-4-deploy-the-insfrastructure)
-  - [Step 5: VM Login](#step-5-vm-login)
-  - [Step 6: Install PowerShell 7 in the vm](#step-6-install-powershell-7-in-the-vm)
-  - [Step 7: Update azd on the VM](#step-7-update-azd-on-the-vm)
-  - [Step 8: Application deployment](#step-8-application-deployment)
-
-</details>
-
 > `How we move from basic coding all the way to AI agents?`
 
 ```mermaid
