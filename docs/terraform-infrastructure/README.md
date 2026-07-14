@@ -75,36 +75,36 @@ graph TD;
 
    <img width="550" alt="img" src="https://github.com/user-attachments/assets/a7a32891-ad72-423a-a1fe-bdb50925b546" />
 
-3. **Terraform Provisioning Stage**: 
+3. **Terraform Provisioning Stage**:
 
-   - **Review**: Creates an execution plan, showing what actions Terraform will take to achieve the desired state defined in your configuration files. It uses the variable values specified in `terraform.tfvars`.
+    **Review**: Creates an execution plan, showing what actions Terraform will take to achieve the desired state defined in your configuration files. It uses the variable values specified in `terraform.tfvars`.
 
-        ```sh
-        terraform plan -var-file terraform.tfvars
-        ```
+    ```sh
+    terraform plan -var-file terraform.tfvars
+    ```
 
-        > At the end, you will see a message in green if everything was executed successfully: 
+    At the end, you will see a message in green if everything was executed successfully:
 
-        <img width="550" alt="Screenshot 2025-03-18 145143" src="https://github.com/user-attachments/assets/4741e863-1ccd-4f2a-a0b8-d5d1964bd890" />
+    <img width="550" alt="Screenshot 2025-03-18 145143" src="https://github.com/user-attachments/assets/4741e863-1ccd-4f2a-a0b8-d5d1964bd890" />
 
-   - **Order Now**: Applies the changes required to reach the desired state of the configuration. It prompts for confirmation before making any changes. It also uses the variable values specified in `terraform.tfvars`.
+    **Order Now**: Applies the changes required to reach the desired state of the configuration. It prompts for confirmation before making any changes. It also uses the variable values specified in `terraform.tfvars`.
 
-        ```sh
-        terraform apply -var-file terraform.tfvars
-        ```
+    ```sh
+    terraform apply -var-file terraform.tfvars
+    ```
 
-        > At the end, you will see a message in green if everything was executed successfully: 
+    At the end, you will see a message in green if everything was executed successfully:
 
-        <img width="550" alt="image" src="https://github.com/user-attachments/assets/2b32b63f-3e9f-46da-a5e9-c39360135251">
+    <img width="550" alt="image" src="https://github.com/user-attachments/assets/2b32b63f-3e9f-46da-a5e9-c39360135251" />
 
-   - **Remove**: Destroys the infrastructure managed by Terraform. It prompts for confirmation before deleting any resources. It also uses the variable values specified in `terraform.tfvars`.
-    
-        ```sh
-        terraform destroy -var-file terraform.tfvars
-        ```
+    **Remove**: Destroys the infrastructure managed by Terraform. It prompts for confirmation before deleting any resources. It also uses the variable values specified in `terraform.tfvars`.
 
-        > At the end, you will see a message in green if everything was executed successfully: 
+    ```sh
+    terraform destroy -var-file terraform.tfvars
+    ```
 
-        <img width="550" alt="image" src="https://github.com/user-attachments/assets/f2089d03-3a3d-431d-b462-8148ef519104">
+    At the end, you will see a message in green if everything was executed successfully:
+
+    <img width="550" alt="image" src="https://github.com/user-attachments/assets/f2089d03-3a3d-431d-b462-8148ef519104" />
 
 
