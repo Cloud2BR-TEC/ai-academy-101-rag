@@ -1,10 +1,10 @@
-﻿# Retrieval-Augmented Generation (RAG) Fundamentals
+# Retrieval-Augmented Generation (RAG) Fundamentals
 
 > Retrieval-Augmented Generation (RAG)
 
 ----------
 
-<details>
+<details markdown="1">
 <summary><b>List of References</b> (Click to expand)</summary>
 
 - [Azure status history](https://azure.status.microsoft/en-us/status/history/)
@@ -53,7 +53,7 @@ flowchart LR
     D:::step
 ```
 
-<details>
+<details markdown="1">
 <summary><b> More details about it here </b> (Click to expand)</summary>
   
 > - We all `start with scripting`, no matter the language, itâ€™s the first step. `Simple/complex instructions, written line by line`, to get something done
@@ -69,7 +69,7 @@ flowchart LR
 
 !!! tip
     Start simple (LLM + AI Search); add embeddings/vector search when keyword recall fails; add hybrid, reranker, and orchestration as scale, accuracy, and workflow complexity grow.
-  <details>
+  <details markdown="1">
   <summary><b>Quick explanation about trends:</b> (Click to expand)</summary>
     
     - LLM + AI Search is enough âž `When Knowledge Base is small and queries predictable`; use metadata/keyword filters to retrieve exact passages and pass them to the LLM for generation.
@@ -98,7 +98,7 @@ flowchart LR
 > - PoV: Aligns with `business goals and KPIs` â†’ `Stakeholder engagement`
 > - MVP: Usable `product with core features` â†’ `Set of features that delivers value and can be deployed` â†’ Dev, Test, UAT (User Acceptance Testing), Prod
 
-<details>
+<details markdown="1">
 <summary><b>Detailed phases</b> (Click to expand)</summary>
   
 | Phase | Goal | What Happens | Focus | Audience | Example |
@@ -124,7 +124,7 @@ flowchart LR
     How to query from `Sharepoint Library`: [GPT-RAG Data Ingestion](https://github.com/Azure/gpt-rag-ingestion/tree/main) 
 
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > - Access & Authentication: Integration uses a `service principal accoun`t registered in Azure Entra ID to authenticate and access the SharePoint document library via Microsoft Graph API. This avoids using personal accounts for programmatic access.
@@ -155,7 +155,7 @@ SharePoint Site â†’ Metadata Streamer â†’ Document Downloader â†’
     How to query from `SQL on prem?`: <br/>
 
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
   
 > This process `involved converting natural language to SQL, where we integrated the SQL database with the Agentic framework. When a user submits a query from the frontend, the system extracts relevant schema details from the AI search index to generate a SQL query with a few example cases. The query is then executed on the SQL server to fetch the records, and the results are displayed in natural language on the UI using an LLM.`  Here more about how it works: [GPT-RAG Orchestrator](https://github.com/Azure/gpt-rag-orchestrator) 
@@ -170,7 +170,7 @@ SharePoint Site â†’ Metadata Streamer â†’ Document Downloader â†’
 | --- | --- | --- | 
 |  <img width="800" alt="image" src="https://github.com/user-attachments/assets/5444e87c-32af-44e8-aa86-22fe4082c4f4" />    |   <img width="800" alt="image" src="https://github.com/user-attachments/assets/af835493-2d76-4216-8df6-3e258c9db949"> | <img width="800" alt="image" src="https://github.com/user-attachments/assets/67e7d9eb-f757-4fe9-85f4-d5bb08b9e55f" /> |
 
-<details>
+<details markdown="1">
 <summary><b>RAG + Fabric (Private Chatbot with your data + Dashboards)</b> (Click to expand)</summary>
 
 <img width="2621" height="1776" alt="ZeroTrustPrivateBot-RAG+Fabric drawio" src="https://github.com/user-attachments/assets/7537d6a7-faa8-492a-9e51-af3fccdbcccc" />
@@ -207,26 +207,26 @@ SharePoint Site â†’ Metadata Streamer â†’ Document Downloader â†’
 
 ### Important Considerations for Production Environment
 
-<details>
+<details markdown="1">
 <summary>Click to expand</summary>
 
 > Some considerations:
 
-<details>
+<details markdown="1">
   <summary>Public Network Site</summary>
   
   > This example is based on a public network site and is intended for demonstration purposes only. It showcases how several Azure resources can work together to achieve the desired result.
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Private Network Configuration</summary>
 
  > For enhanced security, consider configuring your Azure resources to operate within a private network. This can be achieved using Azure Virtual Network (VNet) to isolate your resources and control inbound and outbound traffic. Implementing private endpoints for services like Azure Blob Storage and Azure Functions can further secure your data by restricting access to your VNet.
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Security</summary>
 
   > Ensure that you implement appropriate security measures when deploying this solution in a production environment. This includes: <br/>
@@ -237,7 +237,7 @@ SharePoint Site â†’ Metadata Streamer â†’ Document Downloader â†’
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Scalability</summary>
 
   > While this example provides a basic setup, you may need to scale the resources based on your specific requirements. Azure services offer various scaling options to handle increased workloads. Consider using: <br/>
@@ -247,20 +247,20 @@ SharePoint Site â†’ Metadata Streamer â†’ Document Downloader â†’
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Cost Management</summary>
 
   > Monitor and manage the costs associated with your Azure resources. Use Azure Cost Management and Billing to track usage and optimize resource allocation.
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Compliance</summary>
 
   > Ensure that your deployment complies with relevant regulations and standards. Use Azure Policy to enforce compliance and governance policies across your resources.
 </details>
 
-<details>
+<details markdown="1">
   <summary>Disaster Recovery</summary>
    
 > Implement a disaster recovery plan to ensure business continuity in case of failures. Use Azure Site Recovery and backup solutions to protect your data and applications.
@@ -296,12 +296,12 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 > The Azure Developer CLI (azd) is an `open-source tool` designed to streamline the end-to-end developer workflow on Azure. It provides `high-level commands` that simplify common developer tasks such as `project initialization, infrastructure provisioning, code deployment, and monitoring`. 
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > More detailed technical information:
   
-<details>
+<details markdown="1">
 <summary><strong>Key Features</strong></summary>
 
 - High-level commands for common developer tasks
@@ -316,7 +316,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Commands Overview</strong></summary>
 
 - **Initialization (`azd init`)**: Initialize a new project; sets up the project structure, including necessary configuration files and directories.
@@ -326,7 +326,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Comparison with Other Tools</strong></summary>
 
 - **Azure CLI**: Provides granular control over individual Azure resources; ideal for detailed management of Azure resources, offering extensive command options for precise control.
@@ -335,7 +335,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Templates</strong></summary>
 
 - **Project Structure**: azd templates follow a standardized structure, making it easier for developers to understand and navigate the project.
@@ -345,7 +345,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Customization</strong></summary>
 
 - **Use Terraform with azd**: Allows developers to use Terraform for infrastructure management, providing a consistent approach to resource provisioning; integrate Terraform scripts within azd workflows to manage infrastructure as code, allowing for consistent and repeatable deployments across different environments.
@@ -363,7 +363,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 > PowerShell 7 `complements Azure Developer CLI (azd) by providing robust automation capabilities that enhance the development and deployment workflows on Azure`. With PowerShell 7, you can `automate tasks such as provisioning resources, deploying applications, and managing configurations, which are integral to azd's operations.` For instance, you can use PowerShell scripts to automate the azd provision command, ensuring consistent infrastructure setup across different environments. PowerShell 7's ability to execute commands remotely aligns with azd's remote environment support, allowing seamless management of Azure resources from any location. By integrating PowerShell 7 scripts into azd workflows, developers can streamline their processes, improve efficiency, and maintain greater control over their Azure deployments.
 
-<details>
+<details markdown="1">
 <summary><b> Visual reference here </b> (Click to expand)</summary>
 
 <https://github.com/user-attachments/assets/9bb475e4-7fef-46d9-9147-a28e806b4e1c>
@@ -372,7 +372,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 ### Step 1: Download the repository
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Standard orchestrator
@@ -399,7 +399,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 > Azure network isolation is a security strategy that segments a network into distinct subnets or segments, each functioning as its own small network. This approach enhances security by preventing unauthorized access and data leakage. In Azure, network isolation can be achieved using Virtual Networks (VNets), Network Security Groups (NSGs), and Private Link, allowing precise control over inbound and outbound traffic.
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
   ```
@@ -412,7 +412,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 ### Step 3: Login to Azure
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Make sure you log in to both:
@@ -437,7 +437,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 > `azd provision` command in Azure Developer CLI (azd) automates the deployment of necessary Azure resources for an application. It uses infrastructure-as-code templates to set up Azure services, ensuring consistent and repeatable deployments across different environments.
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
   ```
@@ -462,7 +462,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 > AI/Data Science VM
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 1. To proceed with the deployment, use the Virtual Machine connected via Bastion (set up in step 4).
@@ -479,7 +479,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 ### Step 6: Install PowerShell 7 in the vm
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > After logging into Windows, [install PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package), as all other necessary components are already set up on the VM.
@@ -490,7 +490,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 ### Step 7: Update azd on the VM
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Launch the `Command Prompt` and enter the following command to update azd to its latest version:
@@ -505,7 +505,7 @@ From [Standard Zero-Trust Architecture](./GPT-RAG_SolutionAccelerator/media/arch
 
 ### Step 8: Application deployment
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Please review these configurations: <br/>

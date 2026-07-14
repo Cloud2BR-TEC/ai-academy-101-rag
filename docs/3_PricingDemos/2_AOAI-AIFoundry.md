@@ -1,4 +1,4 @@
-﻿# Demonstration: Azure Open AI \& AI Foundry Pricing 
+# Demonstration: Azure Open AI \& AI Foundry Pricing 
 
 ----------
 
@@ -56,7 +56,7 @@ $$
 
 > Find below some examples:
 
-<details>
+<details markdown="1">
 <summary><strong>Definitions</strong></summary>
 
 - **Use Case**: The scenario being measured (e.g., Small Chatbot Interaction, Enterprise QA Assistant, Bulk Content Generation).

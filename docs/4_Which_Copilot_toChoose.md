@@ -1,4 +1,4 @@
-﻿# Microsoft Copilot Product & Platform Decision Guide - Overview
+# Microsoft Copilot Product & Platform Decision Guide - Overview
 
 > How to choose between `Microsoft 365 Copilot`, `Copilot Studio`, and `Azure AI Foundry (Azure AI Studio)` for your scenario.
 
@@ -61,7 +61,7 @@
 
 Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 
-<details>
+<details markdown="1">
 <summary><b>More details</b> (Click to expand)</summary>
 
 | Scenario                                                                                                  | Choose                                                  | Why this fits                                                                    | Key notes                                                                                                                                                                                                                                          |
@@ -97,7 +97,7 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
     - ![control](https://img.shields.io/badge/customization-orange?style=flat) Unsure? Start on `PaaS for speed + control; move edge cases to IaaS if required.`
 
 
-<details>
+<details markdown="1">
 <summary><b>More details</b> (Click to expand)</summary>
 
 | Dimension | ![SaaS](https://img.shields.io/badge/SaaS-fastest-brightgreen?style=flat) Microsoft Copilots | ![PaaS](https://img.shields.io/badge/PaaS-control-orange?style=flat) Azure AI Foundry | ![IaaS](https://img.shields.io/badge/IaaS-flexibility-blue?style=flat) Self-managed on VMs/Kubernetes |
