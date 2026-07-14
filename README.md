@@ -7,8 +7,6 @@ Last updated: 2026-07-14
 
 ----------
 
-> This repository publishes the Retrieval-Augmented Generation (RAG) Fundamentals course content and GitHub Pages site.
-
 ## Scope
 
 - RAG patterns and architecture foundations.
@@ -18,12 +16,9 @@ Last updated: 2026-07-14
 - Operational playbooks for redeployment and troubleshooting.
 - Terraform-based infrastructure guidance.
 
-## GitHub Pages
-
-This repository is configured to publish with MkDocs + Material on GitHub Pages.
-
-- Site config: mkdocs.yml
-- Content root: docs
-- Deployment workflow: .github/workflows/deploy-github-pages.yml
-- Validation workflow: .github/workflows/validate_and_fix_markdown.yml
-- Deployment cleanup workflow: .github/workflows/clean-github-pages-deployments.yml
+<!-- START BADGE -->
+<div align="center">
+  <img src="https://img.shields.io/badge/Total%20views-1589-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-07-13</p>
+</div>
+<!-- END BADGE -->
