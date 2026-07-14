@@ -70,7 +70,7 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/8246a0cd-622a-4d1e-b575-08123e9b3458" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
 </div>
 
-From [Zero Trust Architecture Deployment](./GPT-RAG_SolutionAccelerator/docs/GUIDE.md#zero-trust-architecture-deployment)
+From [Zero Trust Architecture Deployment](./GPT-RAG_SolutionAccelerator/README.md#zero-trust-architecture-deployment)
 
 <!-- START BADGE -->
 <div align="center">
