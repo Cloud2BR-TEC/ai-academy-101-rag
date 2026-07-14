@@ -17,22 +17,22 @@
 
 !!! tip
     
-    - If you need: â†’ choose `Microsoft 365 Copilot`.
-      - `inâ€‘app AI in Word/Excel/PowerPoint/Teams with enterprise protections` 
-    - If you need: â†’ choose `Copilot Studio`.
+    - If you need: -> choose `Microsoft 365 Copilot`.
+      - `in-app AI in Word/Excel/PowerPoint/Teams with enterprise protections` 
+    - If you need: -> choose `Copilot Studio`.
       - a `custom business agent` (low-code)
-      - `multiâ€‘channel` (Teams/web)
+      - `multi-channel` (Teams/web)
       - automation with `Power Platform`
-      - quick timeâ€‘toâ€‘value 
-    - If you need:  â†’ choose `Azure AI Foundry (Azure AI Studio)/ Azure Open AI`.
+      - quick time-to-value 
+    - If you need:  -> choose `Azure AI Foundry (Azure AI Studio)/ Azure Open AI`.
       - a `developer platform` for `RAG`
-      - multiâ€‘agent patterns
+      - multi-agent patterns
       - `model choice`
       - evaluations
       - deep integration
-    - If you simply want: â†’ `Microsoft Copilot (consumer)`
+    - If you simply want: -> `Microsoft Copilot (consumer)`
       - a `web-grounded personal assistant` (not for sensitive work data)
-    - If you need **AI assistance for coding/development**: â†’ choose `GitHub Copilot`
+    - If you need **AI assistance for coding/development**: -> choose `GitHub Copilot`
       - AI-powered code completions, chat, and PR reviews in your IDE
       - Works in VS Code, JetBrains, Vim, and more
       - Supports 30+ programming languages
@@ -42,7 +42,7 @@
 <img width="846" height="1048" alt="ai-chat-decision-flow drawio" src="../docs/ai-chat-decision-flow.png" />
 
 !!! tip
-    <img src="https://img.shields.io/badge/GitHub_Copilot-AI_Coding_Assistant-6e40c9?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="22"/> &nbsp; **Need AI assistance for your code?** â†’ Use **[GitHub Copilot](https://github.com/features/copilot)**!
+    <img src="https://img.shields.io/badge/GitHub_Copilot-AI_Coding_Assistant-6e40c9?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="22"/> &nbsp; **Need AI assistance for your code?** -> Use **[GitHub Copilot](https://github.com/features/copilot)**!
     
     GitHub Copilot is your AI-powered coding assistant, available directly in your IDE. It provides intelligent code completions, an in-editor chat, pull request summaries, and automated code reviews. If your goal is to **write, understand, or review code faster**, GitHub Copilot is the right choice.
     
@@ -70,8 +70,8 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 | Build a **custom agent** quickly, connect business data, **automate** flows, publish to **Teams or web**  | **Copilot Studio**                                      | Low-code authoring, topics, knowledge sources, **agent flows**, Power Automate   | Great for fusion teams; supports channels via Azure Bot Service.|
 | Develop a **RAG** app or **multi-agent** solution with fine control over models, evals, safety, and infra | **Azure AI Foundry (Azure AI Studio)**                  | Unified SDK/APIs, integrates Azure OpenAI & Cognitive Services, deep ops control | Best for pro-code; aligns with PaaS patterns in CAF.                  |
 | Extend M365 Copilot with **task-specific agents** using declarative tools                                 | **Agents for M365 Copilot** (via Copilot Studio & SDKs) | Purpose-built extensions that run inside M365 Copilot orchestrator               | See tool comparison & planning guide.   |
-| Personal, **non-sensitive** queries with image creation                                                   | **Microsoft Copilot (consumer)**                        | Free web-grounded assistant                                                      | Donâ€™t use for confidential work content. |
-| Need **AI assistance for coding** â€” completions, chat, PR reviews, test generation â€” in your IDE         | <img src="https://img.shields.io/badge/GitHub-Copilot-6e40c9?logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="18"/> **[GitHub Copilot](https://github.com/features/copilot)** | AI pair programmer embedded in your editor; works across 30+ languages | **Free tier** available (2,000 completions + 50 chat messages/month); paid Individual, Business & Enterprise plans also available. |
+| Personal, **non-sensitive** queries with image creation                                                   | **Microsoft Copilot (consumer)**                        | Free web-grounded assistant                                                      | Don't use for confidential work content. |
+| Need **AI assistance for coding** - completions, chat, PR reviews, test generation - in your IDE         | <img src="https://img.shields.io/badge/GitHub-Copilot-6e40c9?logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="18"/> **[GitHub Copilot](https://github.com/features/copilot)** | AI pair programmer embedded in your editor; works across 30+ languages | **Free tier** available (2,000 completions + 50 chat messages/month); paid Individual, Business & Enterprise plans also available. |
 
 </details>
 
@@ -103,20 +103,20 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 | Dimension | ![SaaS](https://img.shields.io/badge/SaaS-fastest-brightgreen?style=flat) Microsoft Copilots | ![PaaS](https://img.shields.io/badge/PaaS-control-orange?style=flat) Azure AI Foundry | ![IaaS](https://img.shields.io/badge/IaaS-flexibility-blue?style=flat) Self-managed on VMs/Kubernetes |
 |---|---|---|---|
 | Service model fit | Fastest path to value for productivity and common copilots | High control and customization for app/platform copilots | Maximum flexibility for bespoke/regulated builds |
-| Primary use cases | M365 Copilot, Copilot Studio solutions, plugin/Graph-powered automations | RAG apps, domain copilots, tool-use/orchestration, API integrations | Custom model hosting, airâ€‘gapped or non-PaaS constraints, specialized GPUs |
+| Primary use cases | M365 Copilot, Copilot Studio solutions, plugin/Graph-powered automations | RAG apps, domain copilots, tool-use/orchestration, API integrations | Custom model hosting, air-gapped or non-PaaS constraints, specialized GPUs |
 | Speed to value | Minutes to days | Days to weeks | Weeks to months |
-| Customization depth | Lowâ€“medium (prompts, plugins, Graph connectors) | High (Prompt Flow, tools/functions, agents, vector/RAG, custom APIs) | Full stack (models, infra, networking, storage, schedulers) |
-| Model choice | Microsoft-hosted models inside M365 | Azure OpenAI, Azure AI model catalog (OSS/commercial), bring-your-own endpoints | Any model you deploy/manage (openâ€‘source or licensed) |
-| Data readiness & access | Govern via Microsoft Graph permissions, sensitivity labels, Purview; minimize oversharing | Plan grounding stores (Azure AI Search, Cosmos DB, Storage); index and chunking strategy | You design data paths, stores, and indexing endâ€‘toâ€‘end |
+| Customization depth | Low-medium (prompts, plugins, Graph connectors) | High (Prompt Flow, tools/functions, agents, vector/RAG, custom APIs) | Full stack (models, infra, networking, storage, schedulers) |
+| Model choice | Microsoft-hosted models inside M365 | Azure OpenAI, Azure AI model catalog (OSS/commercial), bring-your-own endpoints | Any model you deploy/manage (open-source or licensed) |
+| Data readiness & access | Govern via Microsoft Graph permissions, sensitivity labels, Purview; minimize oversharing | Plan grounding stores (Azure AI Search, Cosmos DB, Storage); index and chunking strategy | You design data paths, stores, and indexing end-to-end |
 | Networking & isolation | Tenant/Service boundary managed by Microsoft | Private Link, VNet integration, Managed VNets, regional isolation | Full VNet/subnet control, firewalls, proxies, private DNS |
 | Egress control | Built-in guardrails, limited customization | Private endpoints, NSGs, UDRs, forced tunneling; restrict outbound to PaaS | You own all egress/policy controls |
-| Safety & content filtering | Built-in safety filters and enterprise policies | Azure AI Content Safety, safety system prompts, abuse monitoring options | DIY or integrate thirdâ€‘party safety stack |
+| Safety & content filtering | Built-in safety filters and enterprise policies | Azure AI Content Safety, safety system prompts, abuse monitoring options | DIY or integrate third-party safety stack |
 | Compliance & data residency | Inherits Microsoft enterprise compliance in M365 | Choose Azure regions; align with org policies and regulators | Fully your responsibility to implement and evidence |
 | Identity & access | Entra ID + Microsoft Graph; Power Platform DLP | Entra ID (RBAC), Managed Identity, Key Vault, Azure Policy | Your IAM, secrets, RBAC, and policy framework |
 | Cost model | Per user/feature licensing | Consumption-based (tokens, search, storage, inference) | Infra + software + ops (VMs/GPU/K8s + licenses) |
 | Scaling & ops | Microsoft manages | Azure platform-managed with quotas and SLAs | You provision, scale, patch, monitor |
 | Governance & lifecycle | Power Platform environments, DLP policies, solution packaging | Azure Policy/Blueprints, DevOps pipelines, IaC (Bicep/Terraform) | Your SDLC, IaC, change control, audits |
-| Risks / tradeâ€‘offs | Less deep customization; feature roadmap dependency | Service quotas/limits; more components to secure | Highest ops burden; capacity planning and reliability on you |
+| Risks / trade-offs | Less deep customization; feature roadmap dependency | Service quotas/limits; more components to secure | Highest ops burden; capacity planning and reliability on you |
 
 </details>
 

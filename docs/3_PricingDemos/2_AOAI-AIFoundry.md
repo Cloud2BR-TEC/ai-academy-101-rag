@@ -60,26 +60,26 @@ $$
 <summary><strong>Definitions</strong></summary>
 
 - **Use Case**: The scenario being measured (e.g., Small Chatbot Interaction, Enterprise QA Assistant, Bulk Content Generation).
-- **Model**: The optional model choice (e.g., GPTâ€‘3.5â€‘turbo, GPTâ€‘4 with 8K/32K context) based on your needs.
+- **Model**: The optional model choice (e.g., GPT-3.5-turbo, GPT-4 with 8K/32K context) based on your needs.
 - **Daily Count**: Number of interactions or API calls `per day.`
 - **Avg Input Tokens**: Average tokens in the prompt `per interaction.`
 - **Avg Output Tokens**: Average tokens in the completion `per interaction.`
-- **Daily Input Tokens**: Daily Count Ã— Avg Input Tokens.
-- **Daily Output Tokens**: Daily Count Ã— Avg Output Tokens.
+- **Daily Input Tokens**: Daily Count x Avg Input Tokens.
+- **Daily Output Tokens**: Daily Count x Avg Output Tokens.
 - **Daily Total Tokens**: Sum of daily input and output tokens.
-- **Monthly Input Tokens**: Daily Input Tokens Ã— 30.
-- **Monthly Output Tokens**: Daily Output Tokens Ã— 30.
+- **Monthly Input Tokens**: Daily Input Tokens x 30.
+- **Monthly Output Tokens**: Daily Output Tokens x 30.
 - **Monthly Total Tokens**: Sum of monthly input and output tokens.
 
 </details>
 
 | **Use Case**                | **Model (Optional)** | **Daily Count** | **Avg Input Tokens** | **Avg Output Tokens** | **Daily Input Tokens** | **Daily Output Tokens** | **Daily Total Tokens** | **Monthly Input Tokens** | **Monthly Output Tokens** | **Monthly Total Tokens** |
 |-----------------------------|---------------------------------------------------------------------------|-----------------|----------------------|-----------------------|------------------------|-------------------------|------------------------|--------------------------|---------------------------|--------------------------|
-| **Small Chatbot Interaction**   | (e.g., GPTâ€‘3.5â€‘turbo or GPTâ€‘4)                                           | 200             | 50                   | 150                   | 200 Ã— 50 = 10,000      | 200 Ã— 150 = 30,000      | 10,000 + 30,000 = 40,000| 10,000 Ã— 30 = 300,000    | 30,000 Ã— 30 = 900,000     | ~1,200,000               |
-| **Enterprise QA Assistant**     | (e.g., GPTâ€‘4 with 8K or 32K context depending on precision needs)        | 500             | 100                  | 300                   | 500 Ã— 100 = 50,000     | 500 Ã— 300 = 150,000     | 50,000 + 150,000 = 200,000 | 50,000 Ã— 30 = 1,500,000  | 150,000 Ã— 30 = 4,500,000   | ~6,000,000                |
-| **Bulk Content Generation**     | (e.g., GPTâ€‘3.5â€‘turbo or another efficient variant)                        | 2,000           | 100                  | 150                   | 2,000 Ã— 100 = 200,000  | 2,000 Ã— 150 = 300,000   | 200,000 + 300,000 = 500,000 | 200,000 Ã— 30 = 6,000,000 | 300,000 Ã— 30 = 9,000,000  | ~15,000,000              |
+| **Small Chatbot Interaction**   | (e.g., GPT-3.5-turbo or GPT-4)                                           | 200             | 50                   | 150                   | 200 x 50 = 10,000      | 200 x 150 = 30,000      | 10,000 + 30,000 = 40,000| 10,000 x 30 = 300,000    | 30,000 x 30 = 900,000     | ~1,200,000               |
+| **Enterprise QA Assistant**     | (e.g., GPT-4 with 8K or 32K context depending on precision needs)        | 500             | 100                  | 300                   | 500 x 100 = 50,000     | 500 x 300 = 150,000     | 50,000 + 150,000 = 200,000 | 50,000 x 30 = 1,500,000  | 150,000 x 30 = 4,500,000   | ~6,000,000                |
+| **Bulk Content Generation**     | (e.g., GPT-3.5-turbo or another efficient variant)                        | 2,000           | 100                  | 150                   | 2,000 x 100 = 200,000  | 2,000 x 150 = 300,000   | 200,000 + 300,000 = 500,000 | 200,000 x 30 = 6,000,000 | 300,000 x 30 = 9,000,000  | ~15,000,000              |
 
-<https://github.com/user-attachments/assets/9ede2347-faaf-42c7-8e4c-64ad7c461938>
+![Visual reference](https://github.com/user-attachments/assets/9ede2347-faaf-42c7-8e4c-64ad7c461938)
 
 ## PTUs and TPM relationship
 
@@ -142,7 +142,7 @@ This means with 50 PTUs, you can process 75,000 tokens per minute.
 
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/540a1fd2-cae1-445c-8ca8-a0123cc63d7e" />
 
-<https://github.com/user-attachments/assets/27beba15-57d6-4a2b-943e-496829644dbe>
+![Visual reference](https://github.com/user-attachments/assets/27beba15-57d6-4a2b-943e-496829644dbe)
 
 <!-- START BADGE -->
 <div align="center">

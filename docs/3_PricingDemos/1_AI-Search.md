@@ -33,7 +33,7 @@
 
 - **Number of products**: 50,000  
 - **Attributes per product**: 15 (title, description, price, tags, etc.)  
-- **Estimated index size**: ~ 1â€“2 GB  
+- **Estimated index size**: ~ 1-2 GB  
 - **Use case**: Product search with filters and semantic ranking  
 - **Suggested tier**: `Standard S1 with 2 replicas, 1 partition (for high availability)`  
 
@@ -42,7 +42,7 @@
 - **Number of documents**: 100,000  
 - **Pages per document**: 25  
 - **Total pages**: 2.5 million  
-- **Estimated index size**: ~ 10â€“15 GB  
+- **Estimated index size**: ~ 10-15 GB  
 - **Use case**: Legal search with OCR, entity recognition, and semantic search  
 - **Suggested tier**: `Standard S2 or Storage Optimized L1 with 2+ partitions`  
 
@@ -51,11 +51,11 @@
 - **Articles per day**: 5,000  
 - **Retention**: 1 year  
 - **Total documents**: ~ 1.8 million  
-- **Estimated index size**: ~ 8â€“10 GB  
+- **Estimated index size**: ~ 8-10 GB  
 - **Use case**: Real-time news search with filters and AI enrichment  
 - **Suggested tier**: `Standard S2 or S3 with 3 replicas, 2 partitions`
 
-<https://github.com/user-attachments/assets/809199a9-8a3f-4540-b4fa-d6358e685c01>
+![Visual reference](https://github.com/user-attachments/assets/809199a9-8a3f-4540-b4fa-d6358e685c01)
 
 <!-- START BADGE -->
 <div align="center">
