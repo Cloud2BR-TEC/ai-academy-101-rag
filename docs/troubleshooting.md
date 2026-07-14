@@ -23,6 +23,6 @@ increase request following: https://aka.ms/AddQuotaSubscription.
 1. After initializing the project using the azd templates, navigate to the `infra` folder, where you'll find a file named `main.bicep`. For example: [GPT-RAG_SolutionAccelerator/infra/main.bicep](./GPT-RAG_SolutionAccelerator/infra/main.bicep)
 2. In the `AI search SKU name` configuration section, you can modify the SKU being used. Open [GPT-RAG_SolutionAccelerator/infra/main.bicep](./GPT-RAG_SolutionAccelerator/infra/main.bicep), locate the `standard2/standard` SKU entry, and replace it with the `standard/basic` SKU entry.
 
-<img src="../assets/img/steps/8cc518e2-12f7-427e-9572-ecdccb931a86.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
+<img src="/ai-academy-101-rag/assets/img/steps/8cc518e2-12f7-427e-9572-ecdccb931a86.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 

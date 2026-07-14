@@ -79,7 +79,7 @@ $$
 | **Enterprise QA Assistant**     | (e.g., GPT-4 with 8K or 32K context depending on precision needs)        | 500             | 100                  | 300                   | 500 x 100 = 50,000     | 500 x 300 = 150,000     | 50,000 + 150,000 = 200,000 | 50,000 x 30 = 1,500,000  | 150,000 x 30 = 4,500,000   | ~6,000,000                |
 | **Bulk Content Generation**     | (e.g., GPT-3.5-turbo or another efficient variant)                        | 2,000           | 100                  | 150                   | 2,000 x 100 = 200,000  | 2,000 x 150 = 300,000   | 200,000 + 300,000 = 500,000 | 200,000 x 30 = 6,000,000 | 300,000 x 30 = 9,000,000  | ~15,000,000              |
 
-<img src="../assets/img/steps/9ede2347-faaf-42c7-8e4c-64ad7c461938.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
+<img src="/ai-academy-101-rag/assets/img/steps/9ede2347-faaf-42c7-8e4c-64ad7c461938.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 ## PTUs and TPM relationship
 
@@ -142,7 +142,7 @@ This means with 50 PTUs, you can process 75,000 tokens per minute.
 
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/540a1fd2-cae1-445c-8ca8-a0123cc63d7e" />
 
-<img src="../assets/img/steps/27beba15-57d6-4a2b-943e-496829644dbe.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
+<img src="/ai-academy-101-rag/assets/img/steps/27beba15-57d6-4a2b-943e-496829644dbe.png" alt="Visual reference" style="border: 1px solid #D0D7DE; border-radius: 6px;" />
 
 
 
