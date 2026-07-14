@@ -1,4 +1,4 @@
-# Application Redeployment - Quick Guide
+﻿# Application Redeployment - Quick Guide
 
 ------------------------------------------
 
@@ -12,9 +12,4 @@
 6. Builds and packages your application code into deployable artifacts without deploying them to Azure, run: `azd package`
 7. Deploys your project to Azure, run: `azd deploy`
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
+

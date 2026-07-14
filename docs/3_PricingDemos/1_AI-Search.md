@@ -1,4 +1,4 @@
-# Demonstration: Azure AI Search Pricing 
+﻿# Demonstration: Azure AI Search Pricing 
 
 ----------
 
@@ -57,9 +57,4 @@
 
 ![Visual reference](https://github.com/user-attachments/assets/809199a9-8a3f-4540-b4fa-d6358e685c01)
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
+

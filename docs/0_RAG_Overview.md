@@ -1,4 +1,4 @@
-# Retrieval-Augmented Generation (RAG) pattern - Overview 
+﻿# Retrieval-Augmented Generation (RAG) pattern - Overview 
 
 ----------
 
@@ -137,9 +137,4 @@ graph LR
 
 </details>
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
+

@@ -1,4 +1,4 @@
-# Demonstration: Azure AI Document Intelligence Pricing 
+﻿# Demonstration: Azure AI Document Intelligence Pricing 
 
 ----------
 
@@ -49,9 +49,4 @@
 
   ![Visual reference](https://github.com/user-attachments/assets/50e6770d-4b83-4a0b-a639-7b1f26b29b4b)
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
+

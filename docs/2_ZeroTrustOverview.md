@@ -1,4 +1,4 @@
-# Zero Trust RAG Architecture - Overview
+﻿# Zero Trust RAG Architecture - Overview
 
 ----------
 
@@ -8,7 +8,7 @@
 <summary><b> References </b> (Click to expand)</summary>
    
 - [RAG Microsoft Enterprise RAG Solution Accelerator (local copy)](./GPT-RAG_SolutionAccelerator/README.md)
-- [Overview – Apply Zero Trust principles to Azure IaaS](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview)
+- [Overview â€“ Apply Zero Trust principles to Azure IaaS](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview)
 - [Zero Trust defined](https://www.microsoft.com/en-us/security/business/zero-trust?msockid=38ec3806873362243e122ce086486339)
 - [Zero Trust Essentials eBook](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/zero-trust-essentials-ebook.pdf)
   
@@ -60,7 +60,7 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
 3. **App Service (Frontend)**: The request reaches the frontend application hosted on Azure App Service via a private endpoint.
 4. **Orchestrator (Azure Function)**: The frontend communicates with an orchestrator function within the VNet, which manages the flow of data.
 5. **Database Access**: The orchestrator accesses Azure Cosmos DB to retrieve conversation history.
-6. **Vector Embedding**: The orchestrator requests Azure OpenAI to generate vector embeddings from the user’s query.
+6. **Vector Embedding**: The orchestrator requests Azure OpenAI to generate vector embeddings from the userâ€™s query.
 7. **Key Vault Access**: The orchestrator retrieves the AI Search API key from Azure Key Vault.
 8. **Document Retrieval**: The orchestrator queries Azure AI Search to retrieve relevant documents.
 9. **Response Generation**: The orchestrator uses Azure OpenAI to generate a response based on the retrieved documents.
@@ -72,9 +72,4 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
 
 From [Zero Trust Architecture Deployment](./GPT-RAG_SolutionAccelerator/README.md#zero-trust-architecture-deployment)
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
+

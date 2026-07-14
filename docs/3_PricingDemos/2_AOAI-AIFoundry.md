@@ -1,4 +1,4 @@
-# Demonstration: Azure Open AI \& AI Foundry Pricing 
+﻿# Demonstration: Azure Open AI \& AI Foundry Pricing 
 
 ----------
 
@@ -144,10 +144,5 @@ This means with 50 PTUs, you can process 75,000 tokens per minute.
 
 ![Visual reference](https://github.com/user-attachments/assets/27beba15-57d6-4a2b-943e-496829644dbe)
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
+
 

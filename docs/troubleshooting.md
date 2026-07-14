@@ -25,9 +25,4 @@ increase request following: https://aka.ms/AddQuotaSubscription.
 
     ![Visual reference](https://github.com/user-attachments/assets/8cc518e2-12f7-427e-9572-ecdccb931a86)
 
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
+
