@@ -6,28 +6,6 @@
 
 > You could use the `RAG pattern` to improve the search experience in your web application. For instance, when a `user queries the search system`, it can retrieve `relevant documents from Azure Storage Blob` Containers and use the `retrieved information to generate a more accurate and detailed search result`. [Click here for more information about RAG](./0_RAG_Overview.md).
 
-<details>
-<summary><b>List of References </b> (Click to expand)</summary>
-  
-- [Create a private endpoint for a secure connection to Azure AI Search](https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#use-the-azure-portal-to-access-a-private-search-service)
- 
-</details>
-
-<details>
-<summary><b>Table of Contents</b> (Click to expand)</summary>
-
-- [Overview](#overview)
-- [Create an Azure OpenAI Resource](#create-an-azure-openai-resource)
-- [Set Up Azure AI Search](#set-up-azure-ai-search)
-- [Integrate with Virtual Network VNet](#integrate-with-virtual-network-vnet)
-- [Configure Private Endpoints for Azure AI Search](#configure-private-endpoints-for-azure-ai-search)
-- [Configure Private Endpoints for Azure OpenAI](#configure-private-endpoints-for-azure-openai)
-- [Set Up Network Security Groups NSGs](#set-up-network-security-groups-nsgs)
-- [Create index/Upload Documents](#create-indexupload-documents)
-- [Configure and Deploy AI model](#configure-and-deploy-ai-model)
- 
-</details>
-
 ## Overview
 
 > `same/different vnet` -> `shared access` can be used <br/>
@@ -286,3 +264,4 @@ graph TD
   <p>Refresh Date: 2026-07-01</p>
 </div>
 <!-- END BADGE -->
+

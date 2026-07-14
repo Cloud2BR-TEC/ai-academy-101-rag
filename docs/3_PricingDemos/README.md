@@ -8,33 +8,6 @@
     Use these values in the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) as a reference. While prices may be adjusted, this guide serves as a foundational resource for the procedure to be followed. Keep in mind that `costs will depend on the specific architecture you choose and your unique requirements`. This breakdown provides an overview of key components `you may require all, some, or even additional elements based on your use case.`
 
 
-<details>
-<summary><b>List of References </b> (Click to expand)</summary>
-
-- [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
-- [Document Intelligence pricing](https://azure.microsoft.com/en-in/pricing/details/ai-document-intelligence/?msockid=38ec3806873362243e122ce086486339)
-- [Azure AI Search pricing](https://azure.microsoft.com/en-us/pricing/details/search/?msockid=38ec3806873362243e122ce086486339)
-
-</details>
-
-<details>
-<summary><b>Table of Content </b> (Click to expand)</summary>
-
-- [Document Intelligence](#document-intelligence)
-- [AI Search](#ai-search)
-- [Azure Open AI or AI Foundry](#azure-open-ai-or-ai-foundry)
-- [Storage Account](#storage-account)
-- [Cosmos DB](#cosmos-db)
-- [Key Vault](#key-vault)
-- [Virtual Machine](#virtual-machine)
-- [App Service](#app-service)
-- [Function App](#function-app)
-- [Network](#network)
-- [AI Services](#ai-services)
-- [Front Door](#front-door)
-
-</details>
-
 ## Document Intelligence
 
 > `Azure AI Document Intelligence is a cloud-based AI service (SaaS) that provides an API for document processing`. It `extracts text, tables, and key data from PDFs, images, and scanned documents using AI models.` It automates workflows, supports prebuilt and custom models, and integrates with Azure AI services. Common uses include invoice processing, contract analysis, and healthcare forms. Developers can access it via APIs or SDKs in Python, .NET, and Java.
@@ -136,3 +109,4 @@ graph TD
   <p>Refresh Date: 2026-07-01</p>
 </div>
 <!-- END BADGE -->
+

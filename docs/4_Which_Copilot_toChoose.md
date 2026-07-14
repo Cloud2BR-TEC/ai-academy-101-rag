@@ -4,35 +4,6 @@
 
 ----------
 
-<details>
-<summary><b>List of References</b> (Click to expand)</summary>
-
-- [Microsoft Copilot Studio pricing](https://azure.microsoft.com/en-us/pricing/details/copilot-studio/?msockid=38ec3806873362243e122ce086486339)
-- [Get access to Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing#get-access-to-copilot-studio) - pricing overview 
-- [AI strategy & decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) - Cloud Adoption Framework
-- [Which Copilot is right for your org](https://learn.microsoft.com/copilot/microsoft-365/which-copilot-for-your-organization) - Microsoft 365 Copilot
-- [Choose the right agent solution](https://learn.microsoft.com/microsoft-365/agents-sdk/choose-agent-solution) - Copilot Studio vs SDKs vs Azure AI
-- [Copilot Studio overview](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) - Copilot Studio
-- [Declarative agents tool comparison](https://learn.microsoft.com/microsoft-365-copilot/extensibility/declarative-agent-tool-comparison) - Declarative Agents
-- [Extensibility planning guide (agents for M365 Copilot)](https://learn.microsoft.com/microsoft-365-copilot/extensibility/planning-guide) - Extensibility Planning
-- [Training path: Build a foundation to build AI agents & extend M365 Copilot](https://learn.microsoft.com/training/paths/build-foundation-extend-microsoft-365-copilot/) - Training Path
-
-</details>
-
-<details>
-<summary><b>Table of Content</b> (Click to expand)</summary>
-
-- [Where to start?](#where-to-start)
-- [Quick decision tree](#quick-decision-tree)
-- [Copilot Studio vs Azure AI Foundry Azure AI Studio](#copilot-studio-vs-azure-ai-foundry-azure-ai-studio)
-- [Implementation considerations security, data, networking](#implementation-considerations-security-data-networking)
-- [FAQ](#faq)
-  - [Q1. Is Copilot Studio only for chat?](#q1-is-copilot-studio-only-for-chat)
-  - [Q2. When do I prefer Azure AI Foundry?](#q2-when-do-i-prefer-azure-ai-foundry)
-  - [Q3. Can I extend Microsoft 365 Copilot with my own domain agent?](#q3-can-i-extend-microsoft-365-copilot-with-my-own-domain-agent)
-
-</details>
-
 !!! info
     This is a practical `selection guide` synthesized from Microsoft Learn. For official canonical guidance (which evolves), always verify the linked docs: [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) and [Which Copilot is right for you](https://learn.microsoft.com/copilot/microsoft-365/which-copilot-for-your-organization)
 
@@ -179,3 +150,4 @@ From [Cloud computing - Service Models: SAAS, PAAS, IAAS - Which Is Better For B
   <p>Refresh Date: 2026-07-01</p>
 </div>
 <!-- END BADGE -->
+

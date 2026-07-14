@@ -6,25 +6,6 @@
     Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
 
 
-<details>
-<summary><b>List of References </b> (Click to expand)</summary>
-
-- [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
-- [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/?msockid=38ec3806873362243e122ce086486339#pricing)
-- [Plan to manage costs for Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/manage-costs)
-
-</details>
-
-<details>
-<summary><b>Table of Content </b> (Click to expand)</summary>
-
-- [Pricing Models](#pricing-models)
-- [Pay-As-You-Go Price Calculation](#pay-as-you-go-price-calculation)
-- [PTUs and TPM relationship](#ptus-and-tpm-relationship)
-- [Provisioned PTU Capacity Calculator](#provisioned-ptu-capacity-calculator)
-
-</details>
-
 ## Pricing Models 
 
 Azure OpenAI Service supports different pricing models, including: 
@@ -169,3 +150,4 @@ This means with 50 PTUs, you can process 75,000 tokens per minute.
   <p>Refresh Date: 2026-07-01</p>
 </div>
 <!-- END BADGE -->
+
