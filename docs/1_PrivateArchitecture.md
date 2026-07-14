@@ -136,12 +136,11 @@ graph TD
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/d94492b6-f0cb-4a32-b5b9-9bf895fb464c">
 
 - Create the shared private link or the `private endpoint` as needed:
+  - Shared private access:
 
-   > Shared private access:
-   
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/0c1e7ca2-344d-4140-bf37-8dc1d2afa669">
 
-    > Private Endpoint:
+  - Private Endpoint:
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/1e59a0fc-9bc5-49fb-aa80-29fa47cd92f7">
 
