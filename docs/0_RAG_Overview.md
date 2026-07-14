@@ -2,7 +2,7 @@
 
 ----------
 
-<details markdown="1">
+<details markdown="block">
 <summary><b>List of References </b> (Click to expand)</summary>
    
 - [What's Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search)
@@ -89,7 +89,7 @@ graph LR
     R --> T[Implementation] 
 ```
 
-<details markdown="1">
+<details markdown="block">
 <summary><b>Question Answering</b></summary>
 
 > Providing accurate answers by retrieving relevant documents and generating responses based on them.
@@ -105,7 +105,7 @@ graph LR
 
 </details>
 
-<details markdown="1">
+<details markdown="block">
 <summary><b>Document Summarization</b></summary>
 
 > Summarizing documents by retrieving key sections and generating concise summaries.
@@ -121,7 +121,7 @@ graph LR
 
 </details>
 
-<details markdown="1">
+<details markdown="block">
 <summary><b>Conversational AI</b></summary>
 
 > Enhancing chatbot responses with up-to-date information from external sources.

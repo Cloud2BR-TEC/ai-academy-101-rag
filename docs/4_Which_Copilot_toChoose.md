@@ -61,7 +61,7 @@
 
 Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 
-<details markdown="1">
+<details markdown="block">
 <summary><b>More details</b> (Click to expand)</summary>
 
 | Scenario                                                                                                  | Choose                                                  | Why this fits                                                                    | Key notes                                                                                                                                                                                                                                          |
@@ -97,7 +97,7 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
     - ![control](https://img.shields.io/badge/customization-orange?style=flat) Unsure? Start on `PaaS for speed + control; move edge cases to IaaS if required.`
 
 
-<details markdown="1">
+<details markdown="block">
 <summary><b>More details</b> (Click to expand)</summary>
 
 | Dimension | ![SaaS](https://img.shields.io/badge/SaaS-fastest-brightgreen?style=flat) Microsoft Copilots | ![PaaS](https://img.shields.io/badge/PaaS-control-orange?style=flat) Azure AI Foundry | ![IaaS](https://img.shields.io/badge/IaaS-flexibility-blue?style=flat) Self-managed on VMs/Kubernetes |

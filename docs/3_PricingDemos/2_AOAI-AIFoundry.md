@@ -56,7 +56,7 @@ $$
 
 > Find below some examples:
 
-<details markdown="1">
+<details markdown="block">
 <summary><strong>Definitions</strong></summary>
 
 - **Use Case**: The scenario being measured (e.g., Small Chatbot Interaction, Enterprise QA Assistant, Bulk Content Generation).

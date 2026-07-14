@@ -6,7 +6,7 @@
     Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
 
 
-<details markdown="1">
+<details markdown="block">
 <summary><b>List of References </b> (Click to expand)</summary>
 
 - [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)

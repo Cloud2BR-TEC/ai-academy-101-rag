@@ -4,7 +4,7 @@
 
 > For Azure AI Search and OpenAI in a Retrieval-Augmented Generation (RAG) setup, find below an example of how these components are interconnected within a secure Azure environment.
 
-<details markdown="1">
+<details markdown="block">
 <summary><b> References </b> (Click to expand)</summary>
    
 - [RAG Microsoft Enterprise RAG Solution Accelerator (local copy)](./GPT-RAG_SolutionAccelerator/README.md)
